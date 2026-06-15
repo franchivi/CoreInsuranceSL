@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Core Insurance SL - Correduría y Agencia de Seguros en Córdoba. Asesoramiento profesional independiente para empresas y autónomos desde 1981.">
-  <title>▶︎ Core Insurance SL: Correduría de Seguros en Córdoba</title>
+  <meta name="description" content="Ruiz Re Córdoba | Seguro de vida para familias activas. Elige cómo contactarnos: WhatsApp, teléfono, formulario o visita en oficina. Promoción deportiva temporal.">
+  <title>Ruiz Re Córdoba | Vida · Deporte · Familia</title>
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -19,51 +19,23 @@
     <div class="container nav-container">
       <div class="logo-wrapper">
         <a href="index.html" class="logo-link" id="siteLogo">
-          <!-- SVG Core Insurance SL Logo based on the user's uploaded image -->
-          <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 65" style="display: block;">
-            <defs>
-              <style>
-                .c-text { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 32px; fill: var(--primary); letter-spacing: 0.05em; }
-                .sub-text-1 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 15px; fill: var(--secondary); letter-spacing: 0.08em; }
-                .sub-text-2 { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 9px; fill: var(--text-muted); letter-spacing: 0.18em; }
-              </style>
-            </defs>
-            <g id="logoGroup">
-              <!-- CORE large text -->
-              <text x="10" y="30" class="c-text">C</text>
-              <!-- Shield/Heart nested O -->
-              <g transform="translate(36, 5)">
-                <ellipse cx="16" cy="14" rx="15" ry="14" fill="none" stroke="var(--primary)" stroke-width="4.5" />
-                <!-- Heart Shield Inside -->
-                <path d="M16 8 C13.5 5.5, 10 7, 10 11.5 C10 16.5, 16 21.5, 16 22.5 C16 21.5, 22 16.5, 22 11.5 C22 7, 18.5 5.5, 16 8 Z" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-              </g>
-              <text x="71" y="30" class="c-text">RE</text>
-              
-              <!-- Subtitle Lines -->
-              <text x="11" y="47" class="sub-text-1">INSURANCE SL</text>
-              <text x="11" y="60" class="sub-text-2">AGENCIA DE SEGUROS</text>
-            </g>
-          </svg>
-        </a>
-        <div class="logo-divider"></div>
-        <a href="https://www.ruizre.es/" target="_blank" class="parent-logo-link" title="Empresa matriz: Ruiz Re">
-          <img src="images/ruizre_logo_large_clean.png" alt="Ruiz Re" class="parent-logo-img">
+          <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL" class="logo-img">
         </a>
       </div>
       
       <nav class="nav-wrapper">
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link active">Inicio</a></li>
-          <li><a href="conocenos.html" class="nav-link">Conócenos</a></li>
-          <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-          <li><a href="noticias.html" class="nav-link">Noticias</a></li>
-          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#coberturas" class="nav-link">Coberturas</a></li>
+          <li><a href="#contacto-seccion" class="nav-link">Contacto</a></li>
+          <li><a href="#promocion" class="nav-link">Promoción</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
           <li>
             <button class="theme-toggle" aria-label="Cambiar Tema">
               <i class="fas fa-moon"></i>
             </button>
           </li>
-          <li><a href="#" class="btn btn-primary trigger-callback" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¿Te llamamos?</a></li>
+          <li><a href="#formulario-contacto" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¿Te llamamos?</a></li>
         </ul>
       </nav>
 
@@ -75,100 +47,59 @@
     </div>
   </header>
 
+  <!-- --- Galería Deporte en Familia Section (Top Banner) --- -->
+  <section class="sport-gallery sport-gallery-top" id="galeria-deporte">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto;">
+        <span class="subtitle-section">Vida Activa</span>
+        <h2 class="title-section">Protegemos a familias que disfrutan del deporte</h2>
+        <p>Porque compartir actividad física con los tuyos es una de las mejores formas de invertir en salud. Asegúrate de que esa tranquilidad sea completa.</p>
+      </div>
+
+      <div class="sport-gallery-grid">
+        <div class="sport-gallery-card">
+          <img src="images/family_running.png" alt="Familia corriendo junta en un parque al atardecer">
+          <div class="sport-gallery-caption">
+            <h3><i class="fas fa-running" style="color: var(--accent);"></i> Running en familia</h3>
+            <p>Compartir kilómetros con los tuyos, la mejor motivación.</p>
+          </div>
+        </div>
+
+        <div class="sport-gallery-card">
+          <img src="images/family_cycling.png" alt="Familia practicando ciclismo en la naturaleza">
+          <div class="sport-gallery-caption">
+            <h3><i class="fas fa-bicycle" style="color: var(--accent);"></i> Ciclismo juntos</h3>
+            <p>Rutas y aventuras sobre ruedas para todas las edades.</p>
+          </div>
+        </div>
+
+        <div class="sport-gallery-card">
+          <img src="images/family_hiking.png" alt="Familia haciendo senderismo en la montaña">
+          <div class="sport-gallery-caption">
+            <h3><i class="fas fa-mountain" style="color: var(--accent);"></i> Senderismo activo</h3>
+            <p>Naturaleza, aire libre y tiempo de calidad en familia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- --- Hero Section --- -->
-  <section class="hero">
+  <section id="inicio" class="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <span class="hero-tag"><i class="fas fa-shield-alt"></i> Tu Gerente de Riesgos de Confianza</span>
-          <h1 class="hero-title">Correduría de<br>Seguros en <span>Córdoba</span></h1>
-          <p class="hero-subtitle">En <strong>Core Insurance SL</strong> queremos contribuir al éxito de tu empresa y la tranquilidad de los tuyos defendiendo tus intereses con total independencia y profesionalidad.</p>
+          <span class="hero-tag"><i class="fas fa-heartbeat"></i> Seguro de vida para gente activa</span>
+          <h1 class="hero-title">Protección familiar <span>clara y cercana</span></h1>
+          <p class="hero-subtitle">En <strong>Ruiz Re Córdoba</strong> queremos que hables con nosotros de la forma que te sea más cómoda. Escríbenos por WhatsApp, déjanos tus datos en el formulario, pídenos una llamada o ven a visitarnos en oficina. Tú eliges.</p>
           <div class="hero-actions">
-            <a href="contacto.html" class="btn btn-primary">Contacta con nosotros <i class="fas fa-arrow-right"></i></a>
-            <a href="#" class="btn btn-outline trigger-callback">¿Te llamamos? <i class="fas fa-phone"></i></a>
+            <a href="#formulario-contacto" class="btn btn-primary">Quiero mi propuesta <i class="fas fa-arrow-right"></i></a>
+            <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="btn btn-outline">Hablar por WhatsApp <i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="hero-image-container">
           <div class="hero-image-bg"></div>
-          <!-- Inline custom Premium illustration instead of raw img tags, giving a high-tech UI feeling -->
-          <svg viewBox="0 0 500 500" class="hero-img" style="width:100%; max-width:500px; border-radius: var(--radius-lg); background-color: var(--bg-card); border: 1px solid var(--border-color); box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.2);">
-            <defs>
-              <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="var(--primary)" />
-                <stop offset="100%" stop-color="var(--primary-dark)" />
-              </linearGradient>
-              <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="var(--accent)" />
-                <stop offset="100%" stop-color="var(--accent-light)" />
-              </linearGradient>
-            </defs>
-            <!-- Background grids/dots -->
-            <circle cx="100" cy="100" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="200" cy="100" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="300" cy="100" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="400" cy="100" r="2" fill="var(--text-muted)" opacity="0.3" />
-            
-            <circle cx="100" cy="200" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="400" cy="200" r="2" fill="var(--text-muted)" opacity="0.3" />
-            
-            <circle cx="100" cy="300" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="400" cy="300" r="2" fill="var(--text-muted)" opacity="0.3" />
-            
-            <circle cx="100" cy="400" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="200" cy="400" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="300" cy="400" r="2" fill="var(--text-muted)" opacity="0.3" />
-            <circle cx="400" cy="400" r="2" fill="var(--text-muted)" opacity="0.3" />
-
-            <!-- Core graphic elements -->
-            <g transform="translate(250, 250)">
-              <!-- Outer circular radar rings (glowing orbits) -->
-              <circle cx="0" cy="0" r="190" fill="none" stroke="var(--primary-soft)" stroke-width="2" opacity="0.6" />
-              <circle cx="0" cy="0" r="140" fill="none" stroke="var(--border-color)" stroke-width="1.5" stroke-dasharray="6 6" />
-              <circle cx="0" cy="0" r="90" fill="none" stroke="var(--primary-soft)" stroke-width="2" opacity="0.8" />
-              
-              <!-- Floating graphic capsules (Glassmorphism look) shifted table-style -->
-              <g transform="translate(-150, -140)">
-                <rect x="-40" y="-20" width="80" height="40" rx="10" fill="var(--bg-card)" stroke="var(--border-color)" stroke-width="1.5" opacity="0.85" />
-                <circle cx="-20" cy="0" r="8" fill="var(--primary)" />
-                <line x1="-5" y1="0" x2="20" y2="0" stroke="var(--text-muted)" stroke-width="3" stroke-linecap="round" />
-              </g>
-              
-              <g transform="translate(150, 130)">
-                <rect x="-45" y="-22" width="90" height="45" rx="10" fill="var(--bg-card)" stroke="var(--border-color)" stroke-width="1.5" opacity="0.85" />
-                <circle cx="-20" cy="0" r="8" fill="var(--accent)" />
-                <line x1="-5" y1="0" x2="25" y2="0" stroke="var(--text-muted)" stroke-width="3" stroke-linecap="round" />
-              </g>
-              
-              <!-- Soft background glow behind the logos -->
-              <circle cx="0" cy="0" r="160" fill="var(--primary)" opacity="0.18" style="filter: blur(35px);" />
-              
-              <!-- Elegant Vertical Divider Line -->
-              <line x1="10" y1="-65" x2="10" y2="65" stroke="var(--primary-soft)" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
-              <circle cx="10" cy="-65" r="2.5" fill="var(--accent)" opacity="0.6" />
-              <circle cx="10" cy="65" r="2.5" fill="var(--primary)" opacity="0.6" />
-              
-              <!-- Left side: Core Insurance SL Logo (scale 0.9) -->
-              <g transform="translate(-240, -29) scale(0.9)">
-                <text x="10" y="30" class="c-text">C</text>
-                <g transform="translate(36, 5)">
-                  <ellipse cx="16" cy="14" rx="15" ry="14" fill="none" stroke="var(--primary)" stroke-width="4.5" />
-                  <path d="M16 8 C13.5 5.5, 10 7, 10 11.5 C10 16.5, 16 21.5, 16 22.5 C16 21.5, 22 16.5, 22 11.5 C22 7, 18.5 5.5, 16 8 Z" fill="none" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                </g>
-                <text x="71" y="30" class="c-text">RE</text>
-                <text x="11" y="47" class="sub-text-1">INSURANCE SL</text>
-                <text x="11" y="60" class="sub-text-2">AGENCIA DE SEGUROS</text>
-              </g>
-              
-              <!-- Right side: Ruiz Re Logo (scale up to width 180, height 65) -->
-              <g transform="translate(30, -32.5)">
-                <image href="images/ruizre_logo_large_clean.png" x="0" y="0" height="65" width="180" class="hero-parent-logo" />
-              </g>
-              
-              <!-- Sparkles -->
-              <polygon points="140,-80 143,-70 153,-67 143,-64 140,-54 137,-64 127,-67 137,-70" fill="var(--accent)" />
-              <polygon points="-140,80 -138,86 -132,88 -138,90 -140,96 -142,90 -148,88 -142,86" fill="var(--primary)" />
-            </g>
-          </svg>
+          <img src="images/hero_family_sport.png" alt="Familia activa practicando deporte juntos al aire libre" class="hero-real-img">
         </div>
       </div>
     </div>
@@ -180,7 +111,6 @@
       <h2 class="brand-title">+100 Compañías Aseguradoras</h2>
       <div class="marquee-container">
         <div class="marquee-content">
-          <!-- Real insurance brands that Core / Ruiz Re operates with -->
           <img src="images/zurich.svg" alt="Zurich">
           <img src="images/allianz.svg" alt="Allianz">
           <img src="images/mapfre.svg" alt="Mapfre">
@@ -204,321 +134,387 @@
     </div>
   </section>
 
-  <!-- --- Corporate Values Section --- -->
+  <!-- --- Aspectos Clave & Cifras Section --- -->
   <section class="section-padding">
     <div class="container">
       <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
-        <span class="subtitle-section">Nuestra Filosofía</span>
-        <h2 class="title-section">Valores que Garantizan tu Tranquilidad</h2>
-        <p>Como correduría, defendemos tus intereses con total independencia de las aseguradoras. Tu protección es nuestra única prioridad.</p>
-      </div>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
-          <h3>Independencia</h3>
-          <p>Defendemos tus intereses con total autonomía frente a las compañías aseguradoras, garantizando siempre la opción óptima para ti.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Fortaleza</h3>
-          <p>Nuestra reputación y escala en el sector nos otorgan una alta capacidad de negociación para asegurar las mejores coberturas.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-user-friends"></i></div>
-          <h3>Orientación al Cliente</h3>
-          <p>Estar cerca de ti es nuestra prioridad. Te brindamos un trato personalizado y directo para entender tus necesidades reales.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3>Profesionalidad</h3>
-          <p>Invertimos continuamente en la formación de nuestro equipo técnico, ofreciendo soluciones solventes a cualquier siniestro.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Services Grid Section --- -->
-  <section class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <div class="container">
-      <div class="services-header">
-        <div class="title-group">
-          <span class="subtitle-section">Nuestras Soluciones</span>
-          <h2 class="title-section">Seguros Especializados para Empresas y Autónomos</h2>
-        </div>
-        <a href="servicios.html" class="btn btn-outline" style="margin-top: 1rem;">Ver todos los servicios <i class="fas fa-arrow-right"></i></a>
+        <span class="subtitle-section">Nuestra Propuesta</span>
+        <h2 class="title-section">Una página única, joven y fácil de entender</h2>
+        <p>Aseguramos la tranquilidad de tu familia integrando protección, flexibilidad y un estilo de vida activo de forma transparente.</p>
       </div>
       
-      <div class="services-grid">
-        <!-- 1. Seguro de Instalaciones -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-industry"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>Seguro de Instalaciones</h3>
-            <p>Protección integral para maquinaria, edificaciones e infraestructura técnica frente a daños accidentales o averías graves.</p>
-            <a href="seguros/seguro-instalaciones.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <!-- 2. Seguro de RC Administradores -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-user-tie"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>Responsabilidad Civil Administradores</h3>
-            <p>Salvaguarda el patrimonio personal de directivos y administradores ante reclamaciones de terceros o socios (D&O).</p>
-            <a href="seguros/seguro-administradores.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <!-- 3. Seguro de Baja Laboral -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-briefcase-medical"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>Baja Laboral e Incapacidad</h3>
-            <p>Garantía de ingresos económicos ante incapacidad temporal o enfermedad de autónomos y profesionales clave.</p>
-            <a href="seguros/seguro-baja-laboral.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <!-- 4. Seguro de Ciberriesgos -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-laptop-code"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>Seguro de Ciberriesgos</h3>
-            <p>Protección y respuesta rápida contra hackeos, robo de datos confidenciales y ataques de ransomware.</p>
-            <a href="seguros/seguro-ciber-riesgos.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <!-- 5. Seguro de Invalidez Profesional -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-wheelchair"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>Invalidez Profesional</h3>
-            <p>Seguridad y respaldo económico en caso de invalidez que impida el desarrollo de tu actividad habitual laboral.</p>
-            <a href="seguros/seguro-invalidez-profesional.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-
-        <!-- 6. Seguro de RC Medioambiental -->
-        <div class="service-card">
-          <div class="service-icon-wrapper">
-            <div class="service-icon-circle"><i class="fas fa-leaf"></i></div>
-          </div>
-          <div class="service-content">
-            <h3>RC Medioambiental</h3>
-            <p>Cobertura para la prevención, mitigación y reparación de daños ecológicos accidentales provocados por tu negocio.</p>
-            <a href="seguros/seguro-medioambiental.html" class="service-link">Saber más <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- CTA Action Banner --- -->
-  <section class="section-padding" style="background-color: var(--bg-main);">
-    <div class="container">
-      <div class="cta-banner">
-        <div class="cta-content">
-          <div class="cta-text">
-            <h2>Pídenos un presupuesto sin compromiso</h2>
-            <p>Analizamos tus pólizas actuales sin coste alguno para ofrecerte una propuesta mejorada tanto en coberturas como en precio.</p>
-          </div>
-          <div class="cta-actions">
-            <a href="contacto.html" class="btn btn-accent"><i class="fas fa-comment-dots"></i> ¿Hablamos ahora?</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Reviews / Testimonials Section --- -->
-  <section class="section-padding reviews-section">
-    <div class="container">
-      <div class="text-center" style="max-width: 600px; margin: 0 auto 3rem;">
-        <span class="subtitle-section">Opiniones</span>
-        <h2 class="title-section">Lo Que Nuestros Asegurados Opinan</h2>
-      </div>
-      
-      <div class="reviews-summary">
-        <div class="rating-num">4.9</div>
+      <div class="hero-grid" style="gap: 3rem; align-items: start;">
+        <!-- Left: Key Aspects -->
         <div>
-          <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-          </div>
-          <div style="font-size: 0.88rem; color: var(--text-muted); font-weight: 500;">Basado en 106 reseñas en Google</div>
-        </div>
-      </div>
-
-      <div class="reviews-slider-container">
-        <div class="reviews-wrapper">
-          <!-- Slide 1 -->
-          <div class="review-slide">
-            <div>
-              <div class="review-header">
-                <div class="review-user">
-                  <div class="user-avatar">MM</div>
-                  <div>
-                    <div class="user-name">María Muñoz</div>
-                    <div class="review-date">Hace 1 mes</div>
-                  </div>
-                </div>
-                <div class="review-rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+          <h3 style="margin-bottom: 2rem; font-size: 1.6rem;"><i class="fas fa-star" style="color: var(--accent);"></i> Aspectos Clave</h3>
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
+              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Protección Familiar Integral</h4>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Coberturas de vida riesgo diseñadas a la medida de las familias reales.</p>
               </div>
-              <p class="review-content">"Tengo el seguro del coche con ellos desde hace más de 10 años y siempre me han atendido muy bien y solucionado cualquier problema. Trato inmejorable."</p>
             </div>
-            <div class="review-footer">
-              <span class="review-platform"><i class="fab fa-google" style="color: #4285f4;"></i> Reseña de Google</span>
-            </div>
-          </div>
-          
-          <!-- Slide 2 -->
-          <div class="review-slide">
-            <div>
-              <div class="review-header">
-                <div class="review-user">
-                  <div class="user-avatar">CM</div>
-                  <div>
-                    <div class="user-name">Carlos Martínez</div>
-                    <div class="review-date">Hace 2 meses</div>
-                  </div>
-                </div>
-                <div class="review-rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+            
+            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
+              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-comments"></i></div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Atención Multicanal Flexible</h4>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Elige cómo hablar con nosotros: WhatsApp, formulario, teléfono o en nuestra oficina.</p>
               </div>
-              <p class="review-content">"Son muy buenos profesionales de su sector. Súper recomendables para revisar y optimizar los seguros de tu empresa. Te ahorran dolores de cabeza."</p>
             </div>
-            <div class="review-footer">
-              <span class="review-platform"><i class="fab fa-google" style="color: #4285f4;"></i> Reseña de Google</span>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="review-slide">
-            <div>
-              <div class="review-header">
-                <div class="review-user">
-                  <div class="user-avatar">OA</div>
-                  <div>
-                    <div class="user-name">Omaima Amirou</div>
-                    <div class="review-date">Hace 3 meses</div>
-                  </div>
-                </div>
-                <div class="review-rating-stars">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
+            
+            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
+              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-award"></i></div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Campaña Deportiva de Bienvenida</h4>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Una promoción temporal vinculada al deporte para incentivar tu estilo de vida activo.</p>
               </div>
-              <p class="review-content">"María José me atendió genial. Ha sido súper paciente y me ayudó un montón a encontrar un seguro que encajara con lo que necesitaba y mi presupuesto."</p>
             </div>
-            <div class="review-footer">
-              <span class="review-platform"><i class="fab fa-google" style="color: #4285f4;"></i> Reseña de Google</span>
+            
+            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
+              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-user-friends"></i></div>
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Equipo Cercano y Deportista</h4>
+                <p style="font-size: 0.88rem; margin-bottom: 0;">Un equipo local en Córdoba que comparte tus mismos valores, ritmo de vida y aficiones.</p>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="reviews-nav">
-          <button class="review-nav-btn" id="prevReview" aria-label="Reseña anterior"><i class="fas fa-chevron-left"></i></button>
-          <button class="review-nav-btn" id="nextReview" aria-label="Siguiente reseña"><i class="fas fa-chevron-right"></i></button>
+        <!-- Right: Stats Grid -->
+        <div>
+          <h3 style="margin-bottom: 2rem; font-size: 1.6rem;"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Datos Clave en Cifras</h3>
+          <div class="values-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 0;">
+            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">4</div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Vías de Contacto</h4>
+              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Para iniciar la conversación con nuestra oficina.</p>
+            </div>
+            
+            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem;">1</div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Página Única</h4>
+              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Toda la información relevante, clara y bien estructurada.</p>
+            </div>
+            
+            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem;">2</div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Niveles de Incentivo</h4>
+              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">En nuestra promoción temporal de vida y deporte.</p>
+            </div>
+            
+            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
+              <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">100%</div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Enfoque Familiar</h4>
+              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Pensado para proteger el futuro de tus seres queridos.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- News Section --- -->
-  <section class="section-padding">
+  <!-- --- Método de Contacto Section --- -->
+  <section id="contacto-seccion" class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
       <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
-        <span class="subtitle-section">Consejos Prácticos</span>
-        <h2 class="title-section">Esto Te Interesa</h2>
-        <p>Mantente al día con nuestros análisis sobre ciberriesgos, cambios legislativos en D&O y cómo asegurar la continuidad de tu negocio.</p>
+        <span class="subtitle-section">Tú decides</span>
+        <h2 class="title-section">El asegurado elige cómo le atendemos</h2>
+        <p>Creemos en una comunicación flexible y sin fricciones. No te obligamos a pasar por un único canal: escoge el que mejor se adapte a ti.</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- 1. WhatsApp -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-circle" style="background-color: rgba(37, 211, 102, 0.1); color: #25D366;"><i class="fab fa-whatsapp"></i></div>
+          </div>
+          <div class="service-content">
+            <h3>WhatsApp directo</h3>
+            <p>Para quienes buscan rapidez y respuestas ágiles. Resuelve tus dudas al instante sin esperas en cola directamente con nuestros asesores.</p>
+            <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="service-link" style="color: #25D366;">Escríbenos ahora <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. Formulario -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-circle"><i class="fas fa-file-contract"></i></div>
+          </div>
+          <div class="service-content">
+            <h3>Formulario claro</h3>
+            <p>Perfecto para solicitar un análisis detallado y recibir una propuesta formal por correo electrónico adaptada a tu situación familiar.</p>
+            <a href="#formulario-contacto" class="service-link">Completar formulario <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 3. Teléfono u Oficina -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-circle" style="background-color: var(--accent-soft); color: var(--accent);"><i class="fas fa-building"></i></div>
+          </div>
+          <div class="service-content">
+            <h3>Teléfono u oficina</h3>
+            <p>Si prefieres el trato humano tradicional, llámanos directamente o ven a visitarnos a nuestra oficina en Paseo de la Victoria, Córdoba.</p>
+            <a href="tel:857700111" class="service-link" style="color: var(--accent);">Llamar a oficina <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Coberturas y Capital Orientativo Section --- -->
+  <section id="coberturas" class="section-padding">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
+        <span class="subtitle-section">Nuestra Cobertura</span>
+        <h2 class="title-section">Seguros de vida explicados sin tecnicismos</h2>
+        <p>Queremos que entiendas perfectamente lo que contratas. Coberturas clave enfocadas en lo que realmente importa para tu tranquilidad familiar.</p>
       </div>
 
-      <div class="news-grid">
-        <!-- News Card 1 -->
-        <div class="news-card">
-          <div class="news-img-wrapper">
-            <span class="news-tag">Ciberseguridad</span>
-            <svg viewBox="0 0 400 250" style="width:100%; height:100%; background-color: var(--primary-soft);">
-              <g transform="translate(200, 125)">
-                <rect x="-80" y="-50" width="160" height="100" rx="10" fill="var(--bg-card)" stroke="var(--border-color)" stroke-width="2" />
-                <path d="M-30 -10 L30 -10 M-30 10 L30 10" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" />
-                <circle cx="0" cy="0" r="22" fill="none" stroke="var(--accent)" stroke-width="3" />
-                <path d="M-10 -5 L0 5 L12 -8" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-              </g>
-            </svg>
+      <div class="hero-grid" style="gap: 3.5rem; align-items: start;">
+        <!-- Coberturas Cards -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-heart"></i></div>
+            <h3>Capital por fallecimiento</h3>
+            <p>Protege el equilibrio de tu familia si tú faltas. Ofrece un respaldo económico que les permite mantener su ritmo de vida, pagar la hipoteca y cubrir los gastos diarios sin ahogarse financieramente.</p>
           </div>
-          <div class="news-info">
-            <div class="news-meta">
-              <span><i class="far fa-calendar-alt"></i> 10 de Mayo, 2026</span>
-              <span><i class="far fa-user"></i> Por Redacción</span>
-            </div>
-            <h3>Ransomware en la Pyme: Cómo precaverse</h3>
-            <p>Analizamos las amenazas de robo de datos informáticos más usuales y el coste medio de indemnización de un ataque de ransomware.</p>
-            <a href="noticias.html" class="news-link">Leer artículo <i class="fas fa-arrow-right"></i></a>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-notes-medical"></i></div>
+            <h3>Adelanto por enfermedad grave</h3>
+            <p>Permite disponer del capital contratado de forma anticipada ante un diagnóstico médico importante, facilitando la adaptación del hogar, tratamientos médicos o el cese temporal del trabajo.</p>
+          </div>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-wheelchair"></i></div>
+            <h3>Suplemento por incapacidad</h3>
+            <p>Aporta un capital adicional de soporte en caso de invalidez absoluta y permanente que te impida seguir generando ingresos con tu actividad profesional habitual.</p>
+          </div>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-user-shield"></i></div>
+            <h3>Asesoramiento personalizado</h3>
+            <p>No somos un cotizador web frío y genérico. Estudiamos a fondo tu caso real, responsabilidades familiares y estilo de vida para encontrar la cobertura óptima sin pagar de más.</p>
           </div>
         </div>
 
-        <!-- News Card 2 -->
-        <div class="news-card">
-          <div class="news-img-wrapper">
-            <span class="news-tag">Legal y D&O</span>
-            <svg viewBox="0 0 400 250" style="width:100%; height:100%; background-color: var(--accent-soft);">
-              <g transform="translate(200, 125)">
-                <circle cx="0" cy="0" r="50" fill="none" stroke="var(--secondary)" stroke-width="3" />
-                <path d="M-25 -25 L25 25 M25 -25 L-25 25" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" />
-                <rect x="-40" y="-10" width="80" height="20" rx="4" fill="var(--bg-card)" stroke="var(--border-color)" />
-              </g>
-            </svg>
-          </div>
-          <div class="news-info">
-            <div class="news-meta">
-              <span><i class="far fa-calendar-alt"></i> 28 de Abril, 2026</span>
-              <span><i class="far fa-user"></i> Por Redacción</span>
+        <!-- Capital Orientation Widget -->
+        <div style="position: sticky; top: 100px;">
+          <div class="value-card" style="padding: 2.5rem; border-color: var(--primary-soft); box-shadow: 0 15px 40px rgba(15,23,42,0.08);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-calculator" style="color: var(--primary);"></i> Orientación de Capital</h3>
+            <p style="font-size: 0.9rem;">Ejemplo orientativo para calcular el capital necesario para una familia tipo en Córdoba (ajustable a tu situación):</p>
+            
+            <div class="premium-table-wrapper">
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>Concepto</th>
+                    <th>Importe</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-home" style="color: var(--primary); margin-right: 0.5rem;"></i> Hipoteca pendiente</td>
+                    <td>80.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-piggy-bank" style="color: var(--primary); margin-right: 0.5rem;"></i> Gastos y colchón familiar</td>
+                    <td>35.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-graduation-cap" style="color: var(--primary); margin-right: 0.5rem;"></i> Apoyo hijos / estudios</td>
+                    <td>20.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><strong>💡 TOTAL ORIENTATIVO</strong></td>
+                    <td><strong>135.000 €</strong></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <h3>La Responsabilidad de Administradores</h3>
-            <p>Detalles sobre la nueva legislación de D&O y cómo los administradores responden con su patrimonio personal ante reclamaciones.</p>
-            <a href="noticias.html" class="news-link">Leer artículo <i class="fas fa-arrow-right"></i></a>
+            
+            <div style="background-color: var(--bg-main); padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.85rem; border-left: 3px solid var(--accent); color: var(--text-muted); line-height: 1.5;">
+              <strong>¿Tu situación es diferente?</strong> Calculamos tu capital ideal de forma personalizada teniendo en cuenta tus ingresos y necesidades específicas.
+            </div>
+            <a href="#formulario-contacto" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Solicitar cálculo a medida <i class="fas fa-chevron-right"></i></a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Promoción Temporal Section --- -->
+  <section id="promocion" class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
+        <span class="subtitle-section">Campaña Limitada</span>
+        <h2 class="title-section">Promoción Temporal Vida y Deporte</h2>
+        <p>Queremos incentivar tu estilo de vida saludable. Si contratas tu seguro de vida riesgo ahora, benefíciate de un incentivo deportivo exclusivo según la prima de tu seguro.</p>
+      </div>
+
+      <div class="promo-grid">
+        <!-- Nivel 1 -->
+        <div class="promo-card">
+          <h3>Nivel 1</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">150 €</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
+          <span class="promo-badge">30 € de Incentivo</span>
         </div>
 
-        <!-- News Card 3 -->
-        <div class="news-card">
-          <div class="news-img-wrapper">
-            <span class="news-tag">Autónomos</span>
-            <svg viewBox="0 0 400 250" style="width:100%; height:100%; background-color: var(--primary-soft);">
-              <g transform="translate(200, 125)">
-                <path d="M-60 20 L-20 -20 L20 10 L60 -30" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                <circle cx="60" cy="-30" r="8" fill="var(--accent)" />
-                <line x1="-60" y1="35" x2="60" y2="35" stroke="var(--text-muted)" stroke-width="3" />
-              </g>
-            </svg>
-          </div>
-          <div class="news-info">
-            <div class="news-meta">
-              <span><i class="far fa-calendar-alt"></i> 14 de Abril, 2026</span>
-              <span><i class="far fa-user"></i> Por Redacción</span>
+        <!-- Nivel 2 -->
+        <div class="promo-card" style="border-color: var(--accent);">
+          <div style="position: absolute; top: 12px; left: 12px; background-color: var(--accent); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-round); font-family: var(--font-title); text-transform: uppercase; letter-spacing: 0.05em;">Recomendado</div>
+          <h3>Nivel 2</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">300 €</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
+          <span class="promo-badge" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">50 € de Incentivo</span>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem; font-size: 0.88rem; color: var(--text-muted);">
+        <i class="fas fa-info-circle"></i> Promoción válida para nuevas contrataciones de seguros de vida vinculada a la campaña de estilo de vida activo y deporte.
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Formulario de Contacto Section --- -->
+  <section id="formulario-contacto" class="section-padding">
+    <div class="container" style="max-width: 800px;">
+      <div class="contact-form-panel" style="box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1); border: 1px solid var(--border-color); border-radius: var(--radius-lg); background-color: var(--bg-card);">
+        <div class="text-center" style="margin-bottom: 3rem;">
+          <span class="subtitle-section">Pide tu Propuesta</span>
+          <h2 style="font-size: 2rem; margin-top: 0.5rem; color: var(--secondary);">Quiero mi propuesta de seguro de vida</h2>
+          <p style="font-size: 0.95rem; max-width: 550px; margin: 0.5rem auto 0;">Déjanos tus datos de contacto básicos y nos comunicaremos contigo a través del medio que nos indiques para enviarte tu presupuesto personalizado.</p>
+        </div>
+
+        <form class="modal-form" id="formLandingVida">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vidaName">Nombre y Apellidos *</label>
+              <input type="text" id="vidaName" required placeholder="Ej. Juan Pérez">
             </div>
-            <h3>Baja Temporal en Autónomos</h3>
-            <p>Guía paso a paso sobre coberturas por incapacidad temporal y qué pólizas complementan mejor el subsidio de la Seguridad Social.</p>
-            <a href="noticias.html" class="news-link">Leer artículo <i class="fas fa-arrow-right"></i></a>
+            <div class="form-group">
+              <label for="vidaPhone">Teléfono de contacto *</label>
+              <input type="tel" id="vidaPhone" required placeholder="Ej. 600 000 000" pattern="[0-9]{9,12}">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="vidaZip">Código Postal *</label>
+              <input type="text" id="vidaZip" required placeholder="Ej. 14004">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label style="margin-bottom: 0.5rem; display: block; font-weight: 600; color: var(--secondary);">Prefiero que me contactéis por:</label>
+            <div class="options-grid">
+              <div class="option-check">
+                <input type="checkbox" id="contactWhatsApp" name="contactPref" value="WhatsApp">
+                <label for="contactWhatsApp"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp</label>
+              </div>
+              <div class="option-check">
+                <input type="checkbox" id="contactPhone" name="contactPref" value="Teléfono">
+                <label for="contactPhone"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> Teléfono</label>
+              </div>
+              <div class="option-check">
+                <input type="checkbox" id="contactEmail" name="contactPref" value="Email">
+                <label for="contactEmail"><i class="fas fa-envelope" style="color: var(--accent);"></i> Email</label>
+              </div>
+              <div class="option-check">
+                <input type="checkbox" id="contactOffice" name="contactPref" value="Presencial">
+                <label for="contactOffice"><i class="fas fa-building" style="color: var(--text-muted);"></i> Presencial en oficina</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="vidaSituation">Cuéntanos tu situación (hijos, hipoteca, estilo de vida...) *</label>
+            <textarea id="vidaSituation" rows="4" required placeholder="Ej. Tengo dos hijos, hipoteca pendiente de 70.000 € y salgo a correr habitualmente. Quiero saber qué capital nos encaja."></textarea>
+          </div>
+
+          <div class="form-group form-check" style="margin-bottom: 2rem;">
+            <input type="checkbox" id="vidaAccept" required>
+            <label for="vidaAccept" style="font-size: 0.85rem; line-height: 1.4;">He leído y acepto la <a href="legal/politica-privacidad.html" target="_blank" style="text-decoration: underline;">política de privacidad</a> sobre el tratamiento de mis datos de contacto para la realización del presupuesto. *</label>
+          </div>
+
+          <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center;">
+            <button type="submit" class="btn btn-primary" style="padding-inline: 3rem;">Quiero que me contactéis <i class="fas fa-paper-plane"></i></button>
+            <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;"><i class="fab fa-whatsapp"></i> Prefiero WhatsApp</a>
+          </div>
+        </form>
+
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; padding: 0 1.5rem;">
+          <em>Nota legal:</em> Los datos proporcionados serán tratados confidencialmente por Ruiz Re Córdoba únicamente para emitir la propuesta del seguro de vida riesgo solicitada.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Nosotros (El Equipo) Section --- -->
+  <section id="nosotros" class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="hero-grid" style="gap: 4rem; align-items: center;">
+        <div class="hero-image-container">
+          <div class="hero-image-bg"></div>
+          <div class="about-img-frame" style="position: relative; z-index: 2; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+            <img src="images/oficina_cordoba.jpg" alt="Oficina de Ruiz Re en Paseo de la Victoria, Córdoba" style="width: 100%; height: auto; display: block;">
           </div>
         </div>
+        
+        <div>
+          <span class="subtitle-section">El Equipo Humano</span>
+          <h2 class="title-section" style="margin-bottom: 1.5rem;">Cerca de ti, compartiendo tu estilo de vida</h2>
+          <p>En nuestra oficina de <strong>Ruiz Re Córdoba</strong> no te atiende un algoritmo robotizado. Somos personas reales de Córdoba que entendemos tus inquietudes cotidianas porque compartimos tu estilo de vida.</p>
+          <p>Somos madres y padres de familia que queremos asegurar el porvenir de nuestros hijos. Somos aficionados al deporte (ciclismo, running, senderismo) que valoramos la salud, el esfuerzo y la previsión ante imprevistos.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+            <div style="display: flex; gap: 0.75rem; align-items: start;">
+              <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Equipo cercano y reconocible</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: start;">
+              <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Mismo target, mismo lenguaje</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: start;">
+              <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Comprometidos con el deporte</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: start;">
+              <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Asesoría humana presencial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --- Redes Sociales Section --- -->
+  <section id="redes" class="section-padding text-center">
+    <div class="container" style="max-width: 600px;">
+      <span class="subtitle-section">Síguenos</span>
+      <h2 class="title-section" style="margin-bottom: 1.5rem;">Nuestra comunidad activa</h2>
+      <p style="margin-bottom: 3rem;">Compartimos consejos prácticos de protección, iniciativas deportivas de Córdoba y el día a día de nuestro equipo en redes sociales. ¡Únete a nosotros!</p>
+      
+      <div style="display: flex; gap: 2rem; justify-content: center;">
+        <a href="https://www.instagram.com/" target="_blank" class="value-card" style="padding: 2rem; min-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <span style="font-size: 2.5rem; color: #E1306C;"><i class="fab fa-instagram"></i></span>
+          <h4 style="margin: 0; color: var(--secondary);">Instagram</h4>
+          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Estilo de vida, consejos y comunidad local.</p>
+        </a>
+
+        <a href="https://www.linkedin.com/" target="_blank" class="value-card" style="padding: 2rem; min-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+          <span style="font-size: 2.5rem; color: #0077B5;"><i class="fab fa-linkedin"></i></span>
+          <h4 style="margin: 0; color: var(--secondary);">LinkedIn</h4>
+          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Información profesional, seguros y empresa.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -527,26 +523,24 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-column">
-        <!-- Footer logo -->
-        <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 65" style="display: block; filter: brightness(0) invert(1);">
-          <use href="#logoGroup"></use>
-        </svg>
-        <p class="footer-desc">Asesoramiento profesional para empresas y autónomos desde 1981 con total independencia de las aseguradoras.</p>
+        <!-- Footer logo image -->
+        <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL Logo" class="footer-logo-img">
+        <p class="footer-desc">Ruiz Re Córdoba - Seguro de vida con enfoque familiar. Tu protección y la tranquilidad de los tuyos es nuestra única prioridad.</p>
         <div class="social-links">
-          <span class="social-btn"><i class="fab fa-facebook-f"></i></span>
-          <span class="social-btn"><i class="fab fa-instagram"></i></span>
-          <span class="social-btn"><i class="fab fa-tiktok"></i></span>
+          <a href="https://www.facebook.com/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
       
       <div class="footer-column">
         <h3>Enlaces de Interés</h3>
         <ul class="footer-links">
-          <li><a href="conocenos.html">Conócenos</a></li>
-          <li><a href="servicios.html">Servicios y Seguros</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="contacto.html">Solicitar presupuesto</a></li>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#coberturas">Coberturas</a></li>
+          <li><a href="#contacto-seccion">Método de Contacto</a></li>
+          <li><a href="#promocion">Promoción Especial</a></li>
+          <li><a href="#formulario-contacto">Solicitar Propuesta</a></li>
         </ul>
       </div>
 
@@ -587,7 +581,7 @@
   <!-- --- Floating Whatsapp Widget --- -->
   <div class="whatsapp-widget">
     <div class="whatsapp-label">¿Necesitas ayuda? Escríbenos</div>
-    <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20los%20seguros%20de%20Core%20Insurance%20SL" target="_blank" class="whatsapp-bubble" aria-label="Contacto por WhatsApp">
+    <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="whatsapp-bubble" aria-label="Contacto por WhatsApp">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
@@ -600,32 +594,6 @@
         <button class="btn btn-outline cookie-btn" id="cookieReject">Rechazar</button>
         <button class="btn btn-primary cookie-btn" id="cookieAccept">Aceptar todo</button>
       </div>
-    </div>
-  </div>
-
-  <!-- --- Callback Modal Popup ("¿Te llamamos?") --- -->
-  <div class="modal-overlay" id="callbackModal">
-    <div class="modal-card">
-      <button class="modal-close" id="closeCallbackModal" aria-label="Cerrar ventana"><i class="fas fa-times"></i></button>
-      <div class="modal-header">
-        <h3>¿Te llamamos?</h3>
-        <p>Introduce tus datos y un asesor especialista se pondrá en contacto contigo en unos minutos.</p>
-      </div>
-      <form class="modal-form" id="formCallback">
-        <div class="form-group">
-          <label for="callbackName">Nombre Completo</label>
-          <input type="text" id="callbackName" required placeholder="Ej. Juan Pérez">
-        </div>
-        <div class="form-group">
-          <label for="callbackPhone">Número de Teléfono</label>
-          <input type="tel" id="callbackPhone" required placeholder="Ej. 600 000 000" pattern="[0-9]{9,12}">
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" id="callbackAccept" required>
-          <label for="callbackAccept">He leído y acepto la <a href="legal/politica-privacidad.html" target="_blank">política de privacidad</a>.</label>
-        </div>
-        <button type="submit" class="btn btn-primary btn-submit">Solicitar llamada <i class="fas fa-phone-alt"></i></button>
-      </form>
     </div>
   </div>
 
