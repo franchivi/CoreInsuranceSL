@@ -2061,7 +2061,7 @@ ul {
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .insurance-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
   .cta-content { flex-direction: column; text-align: center; gap: 2rem; }
-  .sport-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .sport-gallery-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
