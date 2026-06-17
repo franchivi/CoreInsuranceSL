@@ -63,19 +63,18 @@ function initThemeToggle() {
 
   const icon = themeBtn.querySelector('i');
   
-  // Check local storage or system preferences
+  // Check local storage (default to dark if not explicitly set to light)
   const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    if (icon) {
-      icon.className = 'fas fa-sun';
-    }
-  } else {
+  if (savedTheme === 'light') {
     document.documentElement.removeAttribute('data-theme');
     if (icon) {
       icon.className = 'fas fa-moon';
+    }
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (icon) {
+      icon.className = 'fas fa-sun';
     }
   }
 

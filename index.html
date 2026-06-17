@@ -11,6 +11,14 @@
   
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    // Set theme immediately to avoid flash of light theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme !== 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
 </head>
 <body class="home-page">
 
@@ -27,15 +35,16 @@
         <ul class="nav-menu">
           <li><a href="#inicio" class="nav-link active">Inicio</a></li>
           <li><a href="#coberturas" class="nav-link">Coberturas</a></li>
-          <li><a href="#contacto-seccion" class="nav-link">Contacto</a></li>
           <li><a href="#promocion" class="nav-link">Promoción</a></li>
+          <li><a href="#contacto-seccion" class="nav-link">Contacto</a></li>
           <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#redes" class="nav-link">Síguenos</a></li>
           <li>
             <button class="theme-toggle" aria-label="Cambiar Tema">
               <i class="fas fa-moon"></i>
             </button>
           </li>
-          <li><a href="#formulario-contacto" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¿Te llamamos?</a></li>
+          <li><a href="#formulario-contacto" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¡Háblanos!</a></li>
         </ul>
       </nav>
 
@@ -47,53 +56,19 @@
     </div>
   </header>
 
-  <!-- --- Galería Deporte en Familia Section (Top Banner) --- -->
-  <section class="sport-gallery sport-gallery-top" id="galeria-deporte">
-    <div class="container">
-      <div class="text-center" style="max-width: 600px; margin: 0 auto;">
-        <span class="subtitle-section">Vida Activa</span>
-        <h2 class="title-section">Protegemos a familias que disfrutan del deporte</h2>
-        <p>Porque compartir actividad física con los tuyos es una de las mejores formas de invertir en salud. Asegúrate de que esa tranquilidad sea completa.</p>
-      </div>
-
-      <div class="sport-gallery-grid">
-        <div class="sport-gallery-card">
-          <img src="images/family_running.png" alt="Familia corriendo junta en un parque al atardecer">
-          <div class="sport-gallery-caption">
-            <h3><i class="fas fa-running" style="color: var(--accent);"></i> Running en familia</h3>
-            <p>Compartir kilómetros con los tuyos, la mejor motivación.</p>
-          </div>
-        </div>
-
-        <div class="sport-gallery-card">
-          <img src="images/family_cycling.png" alt="Familia practicando ciclismo en la naturaleza">
-          <div class="sport-gallery-caption">
-            <h3><i class="fas fa-bicycle" style="color: var(--accent);"></i> Ciclismo juntos</h3>
-            <p>Rutas y aventuras sobre ruedas para todas las edades.</p>
-          </div>
-        </div>
-
-        <div class="sport-gallery-card">
-          <img src="images/family_hiking.png" alt="Familia haciendo senderismo en la montaña">
-          <div class="sport-gallery-caption">
-            <h3><i class="fas fa-mountain" style="color: var(--accent);"></i> Senderismo activo</h3>
-            <p>Naturaleza, aire libre y tiempo de calidad en familia.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- --- Hero Section --- -->
   <section id="inicio" class="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
-          <span class="hero-tag"><i class="fas fa-heartbeat"></i> Seguro de vida para gente activa</span>
-          <h1 class="hero-title">Protección familiar <span>clara y cercana</span></h1>
-          <p class="hero-subtitle">En <strong>Ruiz Re Córdoba</strong> queremos que hables con nosotros de la forma que te sea más cómoda. Escríbenos por WhatsApp, déjanos tus datos en el formulario, pídenos una llamada o ven a visitarnos en oficina. Tú eliges.</p>
+          <span class="hero-tag"><i class="fas fa-bolt"></i> Seguro de vida para gente activa</span>
+          <h1 class="hero-title">Protección familiar <span>clara</span> <br><span>y cercana</span></h1>
+          <div class="hero-feature-card">
+            <h2>Seguros de vida explicados sin tecnicismos</h2>
+          </div>
+          <p class="hero-subtitle">Queremos que entiendas lo que contratas. Coberturas clave enfocadas en lo que realmente importa para tu tranquilidad familiar.</p>
           <div class="hero-actions">
-            <a href="#formulario-contacto" class="btn btn-primary">Quiero mi propuesta <i class="fas fa-arrow-right"></i></a>
+            <a href="#formulario-contacto" class="btn btn-primary">Solicitar propuesta <i class="fas fa-arrow-right"></i></a>
             <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="btn btn-outline">Hablar por WhatsApp <i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -104,113 +79,114 @@
       </div>
     </div>
   </section>
-
-  <!-- --- Brand Sliding Marquee --- -->
-  <section class="brand-marquee text-center">
+  <!-- --- Coberturas y Capital Orientativo Section --- -->
+  <section id="coberturas" class="section-padding">
     <div class="container">
-      <h2 class="brand-title">+100 Compañías Aseguradoras</h2>
-      <div class="marquee-container">
-        <div class="marquee-content">
-          <img src="images/zurich.svg" alt="Zurich">
-          <img src="images/allianz.svg" alt="Allianz">
-          <img src="images/mapfre.svg" alt="Mapfre">
-          <img src="images/generali.svg" alt="Generali">
-          <img src="images/dkv.png" alt="DKV">
-          <img src="images/caser.svg" alt="Caser">
-          <img src="images/axa.svg" alt="AXA">
-          <img src="images/helvetia.svg" alt="Helvetia">
+      <div class="hero-grid" style="gap: 3.5rem; align-items: start;">
+        <!-- Coberturas Cards -->
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-heart"></i></div>
+            <h3>Capital por fallecimiento</h3>
+            <p>Protege el equilibrio de tu familia si tú faltas. Ofrece un respaldo económico que les permite mantener su ritmo de vida, pagar la hipoteca y cubrir los gastos diarios sin ahogarse financieramente.</p>
+          </div>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-wheelchair"></i></div>
+            <h3>Suplemento por incapacidad</h3>
+            <p>Aporta un capital adicional de soporte en caso de invalidez absoluta y permanente que te impida seguir generando ingresos con tu actividad profesional habitual.</p>
+          </div>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-notes-medical"></i></div>
+            <h3>Adelanto por enfermedad grave</h3>
+            <p>Permite disponer del capital contratado de forma anticipada ante un diagnóstico médico importante, facilitando la adaptación del hogar, tratamientos médicos o el cese temporal del trabajo.</p>
+          </div>
+
+          <div class="value-card" style="padding: 2rem;">
+            <div class="value-icon"><i class="fas fa-user-shield"></i></div>
+            <h3>Asesoramiento personalizado</h3>
+            <p>No somos un cotizador web frío y genérico. Estudiamos a fondo tu caso real, responsabilidades familiares y estilo de vida para encontrar la cobertura óptima sin pagar de más.</p>
+          </div>
         </div>
-        <div class="marquee-content" aria-hidden="true">
-          <img src="images/zurich.svg" alt="Zurich">
-          <img src="images/allianz.svg" alt="Allianz">
-          <img src="images/mapfre.svg" alt="Mapfre">
-          <img src="images/generali.svg" alt="Generali">
-          <img src="images/dkv.png" alt="DKV">
-          <img src="images/caser.svg" alt="Caser">
-          <img src="images/axa.svg" alt="AXA">
-          <img src="images/helvetia.svg" alt="Helvetia">
+
+        <!-- Capital Orientation Widget -->
+        <div style="position: sticky; top: 100px;">
+          <div class="value-card" style="padding: 2.5rem; border-color: var(--primary-soft); box-shadow: 0 15px 40px rgba(15,23,42,0.08);">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-calculator" style="color: var(--primary);"></i> Orientación de Capital</h3>
+            <p style="font-size: 0.9rem;">Ejemplo orientativo para calcular el capital necesario para una familia tipo en Córdoba (ajustable a tu situación):</p>
+            
+            <div class="premium-table-wrapper">
+              <table class="premium-table">
+                <thead>
+                  <tr>
+                    <th>Concepto</th>
+                    <th>Importe</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="fas fa-home" style="color: var(--primary); margin-right: 0.5rem;"></i> 1 Hipoteca pendiente</td>
+                    <td>80.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-user-friends" style="color: var(--primary); margin-right: 0.5rem;"></i> 2 Gastos y colchón familiar</td>
+                    <td>35.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fas fa-graduation-cap" style="color: var(--primary); margin-right: 0.5rem;"></i> 3 Apoyo hijos / estudios</td>
+                    <td>20.000 €</td>
+                  </tr>
+                  <tr>
+                    <td><strong>💡 TOTAL ORIENTATIVO</strong></td>
+                    <td><strong>135.000 €</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div style="background-color: var(--bg-main); padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.85rem; border-left: 3px solid var(--accent); color: var(--text-muted); line-height: 1.5;">
+              <strong>¿Tu situación es diferente?</strong> Calculamos tu capital ideal de forma personalizada teniendo en cuenta tus ingresos y necesidades específicas.
+            </div>
+            <a href="#formulario-contacto" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Solicitar propuesta a medida <i class="fas fa-chevron-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- --- Aspectos Clave & Cifras Section --- -->
-  <section class="section-padding">
+  <!-- --- Promoción Temporal Section --- -->
+  <section id="promocion" class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
-      <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
-        <span class="subtitle-section">Nuestra Propuesta</span>
-        <h2 class="title-section">Una página única, joven y fácil de entender</h2>
-        <p>Aseguramos la tranquilidad de tu familia integrando protección, flexibilidad y un estilo de vida activo de forma transparente.</p>
+      <div class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
+        <span class="subtitle-section">Campaña Limitada</span>
+        <h2 class="title-section">Promoción Temporal Vida y Deporte</h2>
+        <p>Queremos incentivarte a mantener una vida saludable. Si contratas tu seguro de vida riesgo ahora, benefíciate de un incentivo deportivo exclusivo según la prima de tu seguro.</p>
       </div>
-      
-      <div class="hero-grid" style="gap: 3rem; align-items: start;">
-        <!-- Left: Key Aspects -->
-        <div>
-          <h3 style="margin-bottom: 2rem; font-size: 1.6rem;"><i class="fas fa-star" style="color: var(--accent);"></i> Aspectos Clave</h3>
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
-              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-shield-alt"></i></div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Protección Familiar Integral</h4>
-                <p style="font-size: 0.88rem; margin-bottom: 0;">Coberturas de vida riesgo diseñadas a la medida de las familias reales.</p>
-              </div>
-            </div>
-            
-            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
-              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-comments"></i></div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Atención Multicanal Flexible</h4>
-                <p style="font-size: 0.88rem; margin-bottom: 0;">Elige cómo hablar con nosotros: WhatsApp, formulario, teléfono o en nuestra oficina.</p>
-              </div>
-            </div>
-            
-            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
-              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-award"></i></div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Campaña Deportiva de Bienvenida</h4>
-                <p style="font-size: 0.88rem; margin-bottom: 0;">Una promoción temporal vinculada al deporte para incentivar tu estilo de vida activo.</p>
-              </div>
-            </div>
-            
-            <div class="value-card" style="padding: 1.5rem 2rem; display: flex; gap: 1.25rem; align-items: start;">
-              <div class="value-icon" style="margin-bottom: 0; flex-shrink: 0; width: 45px; height: 45px;"><i class="fas fa-user-friends"></i></div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Equipo Cercano y Deportista</h4>
-                <p style="font-size: 0.88rem; margin-bottom: 0;">Un equipo local en Córdoba que comparte tus mismos valores, ritmo de vida y aficiones.</p>
-              </div>
-            </div>
-          </div>
+
+      <div class="promo-grid">
+        <!-- Nivel 1 -->
+        <div class="promo-card">
+          <h3>Nivel 1</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">150 €</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
+          <span class="promo-badge">30 € de Incentivo</span>
         </div>
-        
-        <!-- Right: Stats Grid -->
-        <div>
-          <h3 style="margin-bottom: 2rem; font-size: 1.6rem;"><i class="fas fa-chart-bar" style="color: var(--primary);"></i> Datos Clave en Cifras</h3>
-          <div class="values-grid" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 0;">
-            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
-              <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">4</div>
-              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Vías de Contacto</h4>
-              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Para iniciar la conversación con nuestra oficina.</p>
-            </div>
-            
-            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
-              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem;">1</div>
-              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Página Única</h4>
-              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Toda la información relevante, clara y bien estructurada.</p>
-            </div>
-            
-            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
-              <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 0.5rem;">2</div>
-              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Niveles de Incentivo</h4>
-              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">En nuestra promoción temporal de vida y deporte.</p>
-            </div>
-            
-            <div class="value-card text-center" style="padding: 2rem 1.5rem;">
-              <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.5rem;">100%</div>
-              <h4 style="font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--secondary);">Enfoque Familiar</h4>
-              <p style="font-size: 0.82rem; margin-bottom: 0; line-height: 1.4;">Pensado para proteger el futuro de tus seres queridos.</p>
-            </div>
-          </div>
+
+        <!-- Nivel 2 -->
+        <div class="promo-card" style="border-color: var(--accent);">
+          <div style="position: absolute; top: 12px; left: 12px; background-color: var(--accent); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-round); font-family: var(--font-title); text-transform: uppercase; letter-spacing: 0.05em;">Recomendado</div>
+          <h3>Nivel 2</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
+          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">300 €</div>
+          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
+          <span class="promo-badge" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">50 € de Incentivo</span>
         </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem; font-size: 0.88rem; color: var(--text-muted);">
+        <i class="fas fa-info-circle"></i> Promoción válida para nuevas contrataciones de seguros de vida vinculada a la campaña de estilo de vida activo y deporte.
       </div>
     </div>
   </section>
@@ -249,135 +225,17 @@
           </div>
         </div>
 
-        <!-- 3. Teléfono u Oficina -->
+        <!-- 3. Teléfonos Oficina -->
         <div class="service-card">
           <div class="service-icon-wrapper">
             <div class="service-icon-circle" style="background-color: var(--accent-soft); color: var(--accent);"><i class="fas fa-building"></i></div>
           </div>
           <div class="service-content">
-            <h3>Teléfono u oficina</h3>
+            <h3>Teléfonos oficina</h3>
             <p>Si prefieres el trato humano tradicional, llámanos directamente o ven a visitarnos a nuestra oficina en Paseo de la Victoria, Córdoba.</p>
             <a href="tel:857700111" class="service-link" style="color: var(--accent);">Llamar a oficina <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Coberturas y Capital Orientativo Section --- -->
-  <section id="coberturas" class="section-padding">
-    <div class="container">
-      <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
-        <span class="subtitle-section">Nuestra Cobertura</span>
-        <h2 class="title-section">Seguros de vida explicados sin tecnicismos</h2>
-        <p>Queremos que entiendas perfectamente lo que contratas. Coberturas clave enfocadas en lo que realmente importa para tu tranquilidad familiar.</p>
-      </div>
-
-      <div class="hero-grid" style="gap: 3.5rem; align-items: start;">
-        <!-- Coberturas Cards -->
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-heart"></i></div>
-            <h3>Capital por fallecimiento</h3>
-            <p>Protege el equilibrio de tu familia si tú faltas. Ofrece un respaldo económico que les permite mantener su ritmo de vida, pagar la hipoteca y cubrir los gastos diarios sin ahogarse financieramente.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-notes-medical"></i></div>
-            <h3>Adelanto por enfermedad grave</h3>
-            <p>Permite disponer del capital contratado de forma anticipada ante un diagnóstico médico importante, facilitando la adaptación del hogar, tratamientos médicos o el cese temporal del trabajo.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-wheelchair"></i></div>
-            <h3>Suplemento por incapacidad</h3>
-            <p>Aporta un capital adicional de soporte en caso de invalidez absoluta y permanente que te impida seguir generando ingresos con tu actividad profesional habitual.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-user-shield"></i></div>
-            <h3>Asesoramiento personalizado</h3>
-            <p>No somos un cotizador web frío y genérico. Estudiamos a fondo tu caso real, responsabilidades familiares y estilo de vida para encontrar la cobertura óptima sin pagar de más.</p>
-          </div>
-        </div>
-
-        <!-- Capital Orientation Widget -->
-        <div style="position: sticky; top: 100px;">
-          <div class="value-card" style="padding: 2.5rem; border-color: var(--primary-soft); box-shadow: 0 15px 40px rgba(15,23,42,0.08);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-calculator" style="color: var(--primary);"></i> Orientación de Capital</h3>
-            <p style="font-size: 0.9rem;">Ejemplo orientativo para calcular el capital necesario para una familia tipo en Córdoba (ajustable a tu situación):</p>
-            
-            <div class="premium-table-wrapper">
-              <table class="premium-table">
-                <thead>
-                  <tr>
-                    <th>Concepto</th>
-                    <th>Importe</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><i class="fas fa-home" style="color: var(--primary); margin-right: 0.5rem;"></i> Hipoteca pendiente</td>
-                    <td>80.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-piggy-bank" style="color: var(--primary); margin-right: 0.5rem;"></i> Gastos y colchón familiar</td>
-                    <td>35.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-graduation-cap" style="color: var(--primary); margin-right: 0.5rem;"></i> Apoyo hijos / estudios</td>
-                    <td>20.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><strong>💡 TOTAL ORIENTATIVO</strong></td>
-                    <td><strong>135.000 €</strong></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div style="background-color: var(--bg-main); padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.85rem; border-left: 3px solid var(--accent); color: var(--text-muted); line-height: 1.5;">
-              <strong>¿Tu situación es diferente?</strong> Calculamos tu capital ideal de forma personalizada teniendo en cuenta tus ingresos y necesidades específicas.
-            </div>
-            <a href="#formulario-contacto" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Solicitar cálculo a medida <i class="fas fa-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- --- Promoción Temporal Section --- -->
-  <section id="promocion" class="section-padding" style="background-color: var(--bg-card); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <div class="container">
-      <div class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
-        <span class="subtitle-section">Campaña Limitada</span>
-        <h2 class="title-section">Promoción Temporal Vida y Deporte</h2>
-        <p>Queremos incentivar tu estilo de vida saludable. Si contratas tu seguro de vida riesgo ahora, benefíciate de un incentivo deportivo exclusivo según la prima de tu seguro.</p>
-      </div>
-
-      <div class="promo-grid">
-        <!-- Nivel 1 -->
-        <div class="promo-card">
-          <h3>Nivel 1</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">150 €</div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
-          <span class="promo-badge">30 € de Incentivo</span>
-        </div>
-
-        <!-- Nivel 2 -->
-        <div class="promo-card" style="border-color: var(--accent);">
-          <div style="position: absolute; top: 12px; left: 12px; background-color: var(--accent); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-round); font-family: var(--font-title); text-transform: uppercase; letter-spacing: 0.05em;">Recomendado</div>
-          <h3>Nivel 2</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">300 €</div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
-          <span class="promo-badge" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">50 € de Incentivo</span>
-        </div>
-      </div>
-
-      <div class="text-center" style="margin-top: 3rem; font-size: 0.88rem; color: var(--text-muted);">
-        <i class="fas fa-info-circle"></i> Promoción válida para nuevas contrataciones de seguros de vida vinculada a la campaña de estilo de vida activo y deporte.
       </div>
     </div>
   </section>
@@ -480,7 +338,7 @@
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
-              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Mismo target, mismo lenguaje</span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--secondary);">Mismo target, misma tranquilidad</span>
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
@@ -538,9 +396,10 @@
         <ul class="footer-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#coberturas">Coberturas</a></li>
-          <li><a href="#contacto-seccion">Método de Contacto</a></li>
-          <li><a href="#promocion">Promoción Especial</a></li>
-          <li><a href="#formulario-contacto">Solicitar Propuesta</a></li>
+          <li><a href="#promocion">Promoción</a></li>
+          <li><a href="#contacto-seccion">Contacto</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#redes">Síguenos</a></li>
         </ul>
       </div>
 
