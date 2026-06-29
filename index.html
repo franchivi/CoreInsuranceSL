@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ruiz Re Córdoba | Seguro de vida para familias activas. Elige cómo contactarnos: WhatsApp, teléfono, formulario o visita en oficina. Promoción deportiva temporal.">
-  <title>Ruiz Re Córdoba | Vida · Deporte · Familia</title>
+  <meta name="description" content="Seguro de vida para familias activas. Elige cómo contactarnos: WhatsApp, teléfono, formulario o visita en oficina. Promoción deportiva temporal.">
+  <title>Core Insurance | Vida · Deporte · Familia</title>
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -12,13 +12,6 @@
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <script>
-    // Set theme immediately to avoid flash of light theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme !== 'light') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  </script>
 </head>
 <body class="home-page">
 
@@ -27,7 +20,7 @@
     <div class="container nav-container">
       <div class="logo-wrapper">
         <a href="index.html" class="logo-link" id="siteLogo">
-          <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL" class="logo-img">
+          <img src="images/logocoreinsurance_clean.png" alt="Core Insurance SL" class="logo-img">
         </a>
       </div>
       
@@ -39,11 +32,6 @@
           <li><a href="#contacto-seccion" class="nav-link">Contacto</a></li>
           <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
           <li><a href="#redes" class="nav-link">Síguenos</a></li>
-          <li>
-            <button class="theme-toggle" aria-label="Cambiar Tema">
-              <i class="fas fa-moon"></i>
-            </button>
-          </li>
           <li><a href="#formulario-contacto" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¡Háblanos!</a></li>
         </ul>
       </nav>
@@ -79,77 +67,64 @@
       </div>
     </div>
   </section>
-  <!-- --- Coberturas y Capital Orientativo Section --- -->
+
+  <!-- --- Coberturas Section --- -->
   <section id="coberturas" class="section-padding">
     <div class="container">
-      <div class="hero-grid" style="gap: 3.5rem; align-items: start;">
+      <div class="hero-grid" style="grid-template-columns: 1fr; gap: 3.5rem; align-items: start; max-width: 800px; margin: 0 auto;">
         <!-- Coberturas Cards -->
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-heart"></i></div>
-            <h3>Capital por fallecimiento</h3>
-            <p>Protege el equilibrio de tu familia si tú faltas. Ofrece un respaldo económico que les permite mantener su ritmo de vida, pagar la hipoteca y cubrir los gastos diarios sin ahogarse financieramente.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-wheelchair"></i></div>
-            <h3>Suplemento por incapacidad</h3>
-            <p>Aporta un capital adicional de soporte en caso de invalidez absoluta y permanente que te impida seguir generando ingresos con tu actividad profesional habitual.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-notes-medical"></i></div>
-            <h3>Adelanto por enfermedad grave</h3>
-            <p>Permite disponer del capital contratado de forma anticipada ante un diagnóstico médico importante, facilitando la adaptación del hogar, tratamientos médicos o el cese temporal del trabajo.</p>
-          </div>
-
-          <div class="value-card" style="padding: 2rem;">
-            <div class="value-icon"><i class="fas fa-user-shield"></i></div>
-            <h3>Asesoramiento personalizado</h3>
-            <p>No somos un cotizador web frío y genérico. Estudiamos a fondo tu caso real, responsabilidades familiares y estilo de vida para encontrar la cobertura óptima sin pagar de más.</p>
-          </div>
-        </div>
-
-        <!-- Capital Orientation Widget -->
-        <div style="position: sticky; top: 100px;">
-          <div class="value-card" style="padding: 2.5rem; border-color: var(--primary-soft); box-shadow: 0 15px 40px rgba(15,23,42,0.08);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><i class="fas fa-calculator" style="color: var(--primary);"></i> Orientación de Capital</h3>
-            <p style="font-size: 0.9rem;">Ejemplo orientativo para calcular el capital necesario para una familia tipo en Córdoba (ajustable a tu situación):</p>
-            
-            <div class="premium-table-wrapper">
-              <table class="premium-table">
-                <thead>
-                  <tr>
-                    <th>Concepto</th>
-                    <th>Importe</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><i class="fas fa-home" style="color: var(--primary); margin-right: 0.5rem;"></i> 1 Hipoteca pendiente</td>
-                    <td>80.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-user-friends" style="color: var(--primary); margin-right: 0.5rem;"></i> 2 Gastos y colchón familiar</td>
-                    <td>35.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><i class="fas fa-graduation-cap" style="color: var(--primary); margin-right: 0.5rem;"></i> 3 Apoyo hijos / estudios</td>
-                    <td>20.000 €</td>
-                  </tr>
-                  <tr>
-                    <td><strong>💡 TOTAL ORIENTATIVO</strong></td>
-                    <td><strong>135.000 €</strong></td>
-                  </tr>
-                </tbody>
-              </table>
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          
+          <!-- Coberturas -->
+          <div class="coberturas-group">
+            <span class="coberturas-group-header">COBERTURAS:</span>
+            <div class="value-card" style="padding: 2rem;">
+              <div class="value-card-header">
+                <div class="value-icon"><i class="fas fa-user-shield"></i></div>
+                <h3>Asesoramiento personalizado</h3>
+              </div>
+              <p>No somos un cotizador web frío y genérico. Estudiamos a fondo tu caso real, responsabilidades familiares y estilo de vida para encontrar la cobertura óptima sin pagar de más.</p>
             </div>
-            
-            <div style="background-color: var(--bg-main); padding: 1rem 1.25rem; border-radius: var(--radius-sm); font-size: 0.85rem; border-left: 3px solid var(--accent); color: var(--text-muted); line-height: 1.5;">
-              <strong>¿Tu situación es diferente?</strong> Calculamos tu capital ideal de forma personalizada teniendo en cuenta tus ingresos y necesidades específicas.
-            </div>
-            <a href="#formulario-contacto" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Solicitar propuesta a medida <i class="fas fa-chevron-right"></i></a>
           </div>
+
+          <!-- Garantia Basica -->
+          <div class="coberturas-group">
+            <span class="coberturas-group-header">GARANTIA BÁSICA:</span>
+            <div class="value-card" style="padding: 2rem;">
+              <div class="value-card-header">
+                <div class="value-icon"><i class="fas fa-heart"></i></div>
+                <h3>Capital por fallecimiento</h3>
+              </div>
+              <p>Protege el equilibrio de tu familia si tú faltas. Ofrece un respaldo económico que les permite mantener su ritmo de vida, pagar la hipoteca y cubrir los gastos diarios sin ahogarse financieramente.</p>
+            </div>
+          </div>
+
+          <!-- Garantias Complementarias -->
+          <div class="coberturas-group">
+            <span class="coberturas-group-header">GARANTIAS COMPLEMENTARIAS:</span>
+            
+            <div class="value-card" style="padding: 2rem; margin-bottom: 0.5rem;">
+              <div class="value-card-header">
+                <div class="value-icon"><i class="fas fa-wheelchair"></i></div>
+                <h3>Incapacidad permanente</h3>
+              </div>
+              <p>Aporta un capital adicional de soporte en caso de sufrir una invalidez permanente que te impida seguir generando ingresos laborales. Pero no todo es lo mismo, <strong>muy importante</strong> saber qué quieres cubrir:</p>
+              <div class="card-bullets" style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.92rem; line-height: 1.6; text-align: left; align-items: flex-start;">
+                <div><strong>Incapacidad Permanente Total</strong>: si no puedes ejercer tu profesión habitual.</div>
+                <div><strong>Incapacidad Permanente Absoluta</strong>: si no puedes realizar ningún trabajo.</div>
+                <div><strong>Incapacidad Permanente por Gran invalidez</strong>: si no puedes trabajar y además necesitas ayuda diaria.</div>
+              </div>
+            </div>
+
+            <div class="value-card" style="padding: 2rem;">
+              <div class="value-card-header">
+                <div class="value-icon"><i class="fas fa-notes-medical"></i></div>
+                <h3>Adelanto por enfermedad grave</h3>
+              </div>
+              <p>Permite disponer del capital contratado de forma anticipada ante un diagnóstico médico importante, facilitando la adaptación del hogar, tratamientos médicos o el cese temporal del trabajo.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -160,33 +135,31 @@
     <div class="container">
       <div class="text-center" style="max-width: 600px; margin: 0 auto 2rem;">
         <span class="subtitle-section">Campaña Limitada</span>
-        <h2 class="title-section">Promoción Temporal Vida y Deporte</h2>
-        <p>Queremos incentivarte a mantener una vida saludable. Si contratas tu seguro de vida riesgo ahora, benefíciate de un incentivo deportivo exclusivo según la prima de tu seguro.</p>
+        <h2 class="title-section">Promoción Vida y Deporte</h2>
+        <p class="promo-date">Hasta el 30 de septiembre de 2026</p>
+        <p>Sabemos lo difícil que es sacar tiempo para hacer deporte… a nosotros también nos cuesta, pero también sabemos lo necesario que es, por eso, si contratas ahora tu seguro de vida riesgo ahora, te ayudamos a conseguirlo con un cheque regalo para material deportivo.</p>
       </div>
 
       <div class="promo-grid">
         <!-- Nivel 1 -->
         <div class="promo-card">
           <h3>Nivel 1</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">150 €</div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
-          <span class="promo-badge">30 € de Incentivo</span>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Seguros con prima anual superior a</p>
+          <div class="promo-price">150 €</div>
+          <span class="promo-badge">Cheque regalo de 30 €</span>
         </div>
 
         <!-- Nivel 2 -->
         <div class="promo-card" style="border-color: var(--accent);">
-          <div style="position: absolute; top: 12px; left: 12px; background-color: var(--accent); color: #ffffff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-round); font-family: var(--font-title); text-transform: uppercase; letter-spacing: 0.05em;">Recomendado</div>
           <h3>Nivel 2</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted);">Para seguros con prima anual superior a</p>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--secondary); margin: 0.5rem 0 1.5rem;">300 €</div>
-          <p style="font-size: 0.88rem; color: var(--text-muted); min-height: 48px;">Obtén una bonificación directa de bienvenida de</p>
-          <span class="promo-badge" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">50 € de Incentivo</span>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">Seguros con prima anual superior a</p>
+          <div class="promo-price">300 €</div>
+          <span class="promo-badge" style="background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);">Cheque regalo de 50 €</span>
         </div>
       </div>
 
       <div class="text-center" style="margin-top: 3rem; font-size: 0.88rem; color: var(--text-muted);">
-        <i class="fas fa-info-circle"></i> Promoción válida para nuevas contrataciones de seguros de vida vinculada a la campaña de estilo de vida activo y deporte.
+        <i class="fas fa-info-circle"></i> Promoción sujeta a condiciones. Ven a vernos o contacta con nosotros y te informaremos de todos los detalles. Simple y claro.
       </div>
     </div>
   </section>
@@ -196,8 +169,8 @@
     <div class="container">
       <div class="text-center" style="max-width: 600px; margin: 0 auto 4rem;">
         <span class="subtitle-section">Tú decides</span>
-        <h2 class="title-section">El asegurado elige cómo le atendemos</h2>
-        <p>Creemos en una comunicación flexible y sin fricciones. No te obligamos a pasar por un único canal: escoge el que mejor se adapte a ti.</p>
+        <h2 class="title-section">Tú decides cómo quieres contactar con nosotros</h2>
+        <p>Creemos en una comunicación flexible y sin fricciones. Elige el canal que mejor se adapte a ti.</p>
       </div>
       
       <div class="services-grid">
@@ -225,15 +198,27 @@
           </div>
         </div>
 
-        <!-- 3. Teléfonos Oficina -->
+        <!-- 3. Teléfono -->
         <div class="service-card">
           <div class="service-icon-wrapper">
-            <div class="service-icon-circle" style="background-color: var(--accent-soft); color: var(--accent);"><i class="fas fa-building"></i></div>
+            <div class="service-icon-circle" style="background-color: var(--accent-soft); color: var(--accent);"><i class="fas fa-phone-alt"></i></div>
           </div>
           <div class="service-content">
-            <h3>Teléfonos oficina</h3>
-            <p>Si prefieres el trato humano tradicional, llámanos directamente o ven a visitarnos a nuestra oficina en Paseo de la Victoria, Córdoba.</p>
-            <a href="tel:857700111" class="service-link" style="color: var(--accent);">Llamar a oficina <i class="fas fa-chevron-right"></i></a>
+            <h3>Teléfono</h3>
+            <p>Si prefieres hablar con nosotros directamente, puedes llamarnos al 6xx xxx xxx. Estaremos encantados de atenderte y, si lo necesitas, concertamos una cita para ayudarte con más tranquilidad y de forma más personalizada.</p>
+            <a href="tel:857700111" class="service-link" style="color: var(--accent);">Llamar ahora <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 4. Oficina -->
+        <div class="service-card">
+          <div class="service-icon-wrapper">
+            <div class="service-icon-circle" style="background-color: var(--primary-soft); color: var(--primary);"><i class="fas fa-map-marker-alt"></i></div>
+          </div>
+          <div class="service-content">
+            <h3>Oficina</h3>
+            <p>Si te viene mejor, puedes venir a nuestra oficina. Si es con cita previa mejor, así reservamos ese momento para ti y podemos atenderte con tranquilidad, explicarte todo bien y ayudarte de forma más personal. Estamos en Paseo de la Victoria, nº 1, Córdoba.</p>
+            <a href="https://maps.google.com/maps?q=Paseo+de+la+Victoria+1+Córdoba" target="_blank" class="service-link" style="color: var(--primary);">Ver mapa <i class="fas fa-chevron-right"></i></a>
           </div>
         </div>
       </div>
@@ -246,70 +231,31 @@
       <div class="contact-form-panel" style="box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1); border: 1px solid var(--border-color); border-radius: var(--radius-lg); background-color: var(--bg-card);">
         <div class="text-center" style="margin-bottom: 3rem;">
           <span class="subtitle-section">Pide tu Propuesta</span>
-          <h2 style="font-size: 2rem; margin-top: 0.5rem; color: var(--secondary);">Quiero mi propuesta de seguro de vida</h2>
+          <h2 style="font-size: 2rem; margin-top: 0.5rem;">Quiero mi propuesta de seguro de vida</h2>
           <p style="font-size: 0.95rem; max-width: 550px; margin: 0.5rem auto 0;">Déjanos tus datos de contacto básicos y nos comunicaremos contigo a través del medio que nos indiques para enviarte tu presupuesto personalizado.</p>
         </div>
 
         <form class="modal-form" id="formLandingVida">
           <div class="form-row">
             <div class="form-group">
-              <label for="vidaName">Nombre y Apellidos *</label>
+              <label for="vidaName">Nombre *</label>
               <input type="text" id="vidaName" required placeholder="Ej. Juan Pérez">
             </div>
             <div class="form-group">
-              <label for="vidaPhone">Teléfono de contacto *</label>
-              <input type="tel" id="vidaPhone" required placeholder="Ej. 600 000 000" pattern="[0-9]{9,12}">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="vidaZip">Código Postal *</label>
-              <input type="text" id="vidaZip" required placeholder="Ej. 14004">
+              <label for="vidaContact">Teléfono o email de contacto *</label>
+              <input type="text" id="vidaContact" required placeholder="Ej. 600 000 000 o juan@email.com">
             </div>
           </div>
 
           <div class="form-group">
-            <label style="margin-bottom: 0.5rem; display: block; font-weight: 600; color: var(--secondary);">Prefiero que me contactéis por:</label>
-            <div class="options-grid">
-              <div class="option-check">
-                <input type="checkbox" id="contactWhatsApp" name="contactPref" value="WhatsApp">
-                <label for="contactWhatsApp"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp</label>
-              </div>
-              <div class="option-check">
-                <input type="checkbox" id="contactPhone" name="contactPref" value="Teléfono">
-                <label for="contactPhone"><i class="fas fa-phone-alt" style="color: var(--primary);"></i> Teléfono</label>
-              </div>
-              <div class="option-check">
-                <input type="checkbox" id="contactEmail" name="contactPref" value="Email">
-                <label for="contactEmail"><i class="fas fa-envelope" style="color: var(--accent);"></i> Email</label>
-              </div>
-              <div class="option-check">
-                <input type="checkbox" id="contactOffice" name="contactPref" value="Presencial">
-                <label for="contactOffice"><i class="fas fa-building" style="color: var(--text-muted);"></i> Presencial en oficina</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="vidaSituation">Cuéntanos tu situación (hijos, hipoteca, estilo de vida...) *</label>
-            <textarea id="vidaSituation" rows="4" required placeholder="Ej. Tengo dos hijos, hipoteca pendiente de 70.000 € y salgo a correr habitualmente. Quiero saber qué capital nos encaja."></textarea>
-          </div>
-
-          <div class="form-group form-check" style="margin-bottom: 2rem;">
-            <input type="checkbox" id="vidaAccept" required>
-            <label for="vidaAccept" style="font-size: 0.85rem; line-height: 1.4;">He leído y acepto la <a href="legal/politica-privacidad.html" target="_blank" style="text-decoration: underline;">política de privacidad</a> sobre el tratamiento de mis datos de contacto para la realización del presupuesto. *</label>
+            <label for="vidaSituation">Quieres contarnos algo más sobre lo que necesitas?</label>
+            <textarea id="vidaSituation" rows="4" placeholder="Ej. Necesito cubrir un capital de 100.000 € y como son autónomo con trabajo manual estoy interesado en la cobertura de Incapacidad Permanente Total."></textarea>
           </div>
 
           <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center;">
-            <button type="submit" class="btn btn-primary" style="padding-inline: 3rem;">Quiero que me contactéis <i class="fas fa-paper-plane"></i></button>
-            <a href="https://wa.me/34857700111?text=Hola,%20quiero%20información%20sobre%20el%20seguro%20de%20vida" target="_blank" class="btn btn-outline" style="border-color: #25D366; color: #25D366;"><i class="fab fa-whatsapp"></i> Prefiero WhatsApp</a>
+            <button type="submit" class="btn btn-primary" style="padding-inline: 3rem;">Quiero mi propuesta <i class="fas fa-paper-plane"></i></button>
           </div>
         </form>
-
-        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; padding: 0 1.5rem;">
-          <em>Nota legal:</em> Los datos proporcionados serán tratados confidencialmente por Ruiz Re Córdoba únicamente para emitir la propuesta del seguro de vida riesgo solicitada.
-        </div>
       </div>
     </div>
   </section>
@@ -328,17 +274,17 @@
         <div>
           <span class="subtitle-section">El Equipo Humano</span>
           <h2 class="title-section" style="margin-bottom: 1.5rem;">Cerca de ti, compartiendo tu estilo de vida</h2>
-          <p>En nuestra oficina de <strong>Ruiz Re Córdoba</strong> no te atiende un algoritmo robotizado. Somos personas reales de Córdoba que entendemos tus inquietudes cotidianas porque compartimos tu estilo de vida.</p>
-          <p>Somos madres y padres de familia que queremos asegurar el porvenir de nuestros hijos. Somos aficionados al deporte (ciclismo, running, senderismo) que valoramos la salud, el esfuerzo y la previsión ante imprevistos.</p>
+          <p>En nuestra oficina no te atiende un algoritmo robotizado. Somos personas reales que entendemos tus inquietudes cotidianas porque compartimos tu estilo de vida.</p>
+          <p>Somos madres y padres de familia que queremos asegurar el porvenir de nuestros hijos. Somos aficionados al deporte (running, senderismo, gimnasio…) que valoramos la salud, el esfuerzo y la previsión ante imprevistos.</p>
           
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
-              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Equipo cercano y reconocible</span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Equipo cercano</span>
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
-              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Mismo target, misma tranquilidad</span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Mismo target, mismo lenguaje</span>
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
@@ -346,7 +292,7 @@
             </div>
             <div style="display: flex; gap: 0.75rem; align-items: start;">
               <span style="color: var(--accent); font-size: 1.25rem;"><i class="fas fa-check-circle"></i></span>
-              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Asesoría humana presencial</span>
+              <span style="font-size: 0.9rem; font-weight: 600; color: var(--text-main);">Preocupados por la protección de nuestra familia</span>
             </div>
           </div>
         </div>
@@ -358,20 +304,20 @@
   <section id="redes" class="section-padding text-center">
     <div class="container" style="max-width: 600px;">
       <span class="subtitle-section">Síguenos</span>
-      <h2 class="title-section" style="margin-bottom: 1.5rem;">Nuestra comunidad activa</h2>
-      <p style="margin-bottom: 3rem;">Compartimos consejos prácticos de protección, iniciativas deportivas de Córdoba y el día a día de nuestro equipo en redes sociales. ¡Únete a nosotros!</p>
+      <h2 class="title-section" style="margin-bottom: 1.5rem;">Una comunidad que comparte protección, estilo de vida y confianza</h2>
+      <p style="margin-bottom: 3rem;">En nuestras redes compartimos contenido útil sobre protección, bienestar y la forma en la que acompañamos a nuestros clientes en su día a día. Síguenos para descubrir una marca cercana, activa y conectada con lo que realmente importa.</p>
       
       <div style="display: flex; gap: 2rem; justify-content: center;">
         <a href="https://www.instagram.com/" target="_blank" class="value-card" style="padding: 2rem; min-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
           <span style="font-size: 2.5rem; color: #E1306C;"><i class="fab fa-instagram"></i></span>
-          <h4 style="margin: 0; color: var(--secondary);">Instagram</h4>
-          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Estilo de vida, consejos y comunidad local.</p>
+          <h4 style="margin: 0;">Instagram</h4>
+          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Inspiración, estilo de vida y consejos prácticos para el día a día.</p>
         </a>
 
         <a href="https://www.linkedin.com/" target="_blank" class="value-card" style="padding: 2rem; min-width: 200px; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
           <span style="font-size: 2.5rem; color: #0077B5;"><i class="fab fa-linkedin"></i></span>
-          <h4 style="margin: 0; color: var(--secondary);">LinkedIn</h4>
-          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Información profesional, seguros y empresa.</p>
+          <h4 style="margin: 0;">LinkedIn</h4>
+          <p style="font-size: 0.8rem; margin: 0; color: var(--text-muted);">Visión profesional, seguros y actualidad de marca.</p>
         </a>
       </div>
     </div>
@@ -382,10 +328,9 @@
     <div class="container footer-top">
       <div class="footer-column">
         <!-- Footer logo image -->
-        <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL Logo" class="footer-logo-img">
-        <p class="footer-desc">Ruiz Re Córdoba - Seguro de vida con enfoque familiar. Tu protección y la tranquilidad de los tuyos es nuestra única prioridad.</p>
+        <img src="images/logocoreinsurance_clean.png" alt="Core Insurance SL Logo" class="footer-logo-img">
+        <p class="footer-desc">Seguro de vida con enfoque familiar. Tu protección y la tranquilidad de los tuyos es nuestra única prioridad.</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/" target="_blank" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://www.linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>

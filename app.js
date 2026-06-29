@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileMenu();
-  initThemeToggle();
   initModalCallback();
   initReviewsSlider();
   initCookieConsent();
@@ -56,41 +55,6 @@ function initMobileMenu() {
   });
 }
 
-/* --- Dark/Light Theme Toggle --- */
-function initThemeToggle() {
-  const themeBtn = document.querySelector('.theme-toggle');
-  if (!themeBtn) return;
-
-  const icon = themeBtn.querySelector('i');
-  
-  // Check local storage (default to dark if not explicitly set to light)
-  const savedTheme = localStorage.getItem('theme');
-  
-  if (savedTheme === 'light') {
-    document.documentElement.removeAttribute('data-theme');
-    if (icon) {
-      icon.className = 'fas fa-moon';
-    }
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    if (icon) {
-      icon.className = 'fas fa-sun';
-    }
-  }
-
-  themeBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    if (currentTheme === 'dark') {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'light');
-      if (icon) icon.className = 'fas fa-moon';
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-      if (icon) icon.className = 'fas fa-sun';
-    }
-  });
-}
 
 /* --- "¿Te llamamos?" Modal Trigger --- */
 function initModalCallback() {

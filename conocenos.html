@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
     <div class="container nav-container">
       <div class="logo-wrapper">
         <a href="index.html" class="logo-link" id="siteLogo">
-          <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL" class="logo-img">
+          <img src="images/logocoreinsurance_clean.png" alt="Core Insurance SL" class="logo-img">
         </a>
       </div>
       
@@ -30,11 +30,6 @@
           <li><a href="servicios.html" class="nav-link">Servicios</a></li>
           <li><a href="noticias.html" class="nav-link">Noticias</a></li>
           <li><a href="contacto.html" class="nav-link">Contacto</a></li>
-          <li>
-            <button class="theme-toggle" aria-label="Cambiar Tema">
-              <i class="fas fa-moon"></i>
-            </button>
-          </li>
           <li><a href="#" class="btn btn-primary trigger-callback" style="padding: 0.6rem 1.5rem; font-size: 0.88rem;">¿Te llamamos?</a></li>
         </ul>
       </nav>
@@ -81,7 +76,7 @@
               <!-- Large shield shape outline -->
               <path d="M-50 -70 L50 -70 C50 -70, 55 -25, 55 15 C55 55, 0 80, 0 80 C0 80, -55 55, -55 15 C-55 -25, -50 -70, -50 -70 Z" fill="none" stroke="var(--primary)" stroke-width="4.5" />
               <path d="M0 -30 C-8 -40, -20 -40, -20 -28 C-20 -15, 0 5, 0 7 C0 5, 20 -15, 20 -28 C20 -40, 8 -40, 0 -30 Z" fill="var(--primary)" />
-              <text x="0" y="45" font-family="var(--font-title)" font-weight="700" font-size="16" fill="var(--secondary)" text-anchor="middle">DESDE 1981</text>
+              <text x="0" y="45" font-family="var(--font-title)" font-weight="700" font-size="16" fill="var(--secondary)" text-anchor="middle" class="svg-text-fill">DESDE 1981</text>
             </g>
           </svg>
         </div>
@@ -100,29 +95,37 @@
       <div class="values-grid">
         <!-- Independencia -->
         <div class="value-card">
-          <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
-          <h3>Independencia</h3>
+          <div class="value-card-header">
+            <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>Independencia</h3>
+          </div>
           <p>Como asegurado, defendemos tus intereses con total independencia de la Compañía Aseguradora, sea cual sea. De este modo nos aseguramos de que tus objetivos se cumplan de forma rápida, eficaz y diligente.</p>
         </div>
 
         <!-- Fortaleza -->
         <div class="value-card">
-          <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Fortaleza</h3>
+          <div class="value-card-header">
+            <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Fortaleza</h3>
+          </div>
           <p>Nuestro tamaño dentro del sector y nuestra reputación nos facilitan un nivel de interlocución altamente satisfactorio con las Compañías Aseguradoras, lo que nos permite defender mejor los intereses de nuestros clientes y alcanzar metas ambiciosas.</p>
         </div>
 
         <!-- Orientación Cliente -->
         <div class="value-card">
-          <div class="value-icon"><i class="fas fa-user-friends"></i></div>
-          <h3>Orientación Cliente</h3>
+          <div class="value-card-header">
+            <div class="value-icon"><i class="fas fa-user-friends"></i></div>
+            <h3>Orientación Cliente</h3>
+          </div>
           <p>Nuestro crecimiento territorial tiene un objetivo primordial, estar más cerca de ti para ofrecerte un trato personal y cercano, para estar al tanto de tus intereses y necesidades en todo momento.</p>
         </div>
 
         <!-- Profesionalidad -->
         <div class="value-card">
-          <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3>Profesionalidad</h3>
+          <div class="value-card-header">
+            <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Profesionalidad</h3>
+          </div>
           <p>Nuestro capital humano es nuestro mejor activo, por ello invertimos en las personas y en su formación. Solo un empleado competente y provisto de una formación adecuada puede satisfacer a nuestros clientes afrontando cualquier situación que se plantee.</p>
         </div>
       </div>
@@ -151,7 +154,7 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-column">
-        <img src="images/logocoreinsurance.jpeg" alt="Core Insurance SL" class="footer-logo-img">
+        <img src="images/logocoreinsurance_clean.png" alt="Core Insurance SL" class="footer-logo-img">
         <p class="footer-desc">Asesoramiento profesional para empresas y autónomos desde 1981 con total independencia de las aseguradoras.</p>
         <div class="social-links">
           <span class="social-btn"><i class="fab fa-facebook-f"></i></span>
