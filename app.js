@@ -165,9 +165,10 @@ function initCookieConsent() {
   rejectBtn.addEventListener('click', () => handleChoice('rejected'));
 }
 
-/* --- Simulated Form Submission with Toasts --- */
+/* --- WhatsApp Form Submission Handler --- */
 function initSimulatedForms() {
   const forms = document.querySelectorAll('form');
+  const waNumber = '34696693617';
   
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
@@ -181,10 +182,35 @@ function initSimulatedForms() {
       
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Abriendo WhatsApp...';
       }
 
-      // Simulate network request delay
+      let msgText = '';
+
+      if (form.id === 'formLandingVida') {
+        const name = form.querySelector('#vidaName')?.value.trim() || '';
+        const contact = form.querySelector('#vidaContact')?.value.trim() || '';
+        const situation = form.querySelector('#vidaSituation')?.value.trim() || '';
+        msgText = `Hola, solicito propuesta de seguro de vida:\n\n👤 *Nombre:* ${name}\n📞 *Contacto:* ${contact}`;
+        if (situation) msgText += `\n💬 *Necesidad:* ${situation}`;
+      } else if (form.id === 'formContactPage') {
+        const name = form.querySelector('#contactName')?.value.trim() || '';
+        const email = form.querySelector('#contactEmail')?.value.trim() || '';
+        const phone = form.querySelector('#contactPhone')?.value.trim() || '';
+        const subjectSelect = form.querySelector('#contactSubject');
+        const subject = subjectSelect ? subjectSelect.options[subjectSelect.selectedIndex].text : '';
+        const message = form.querySelector('#contactMessage')?.value.trim() || '';
+        msgText = `Hola, envío una consulta desde la web:\n\n👤 *Nombre:* ${name}\n📧 *Email:* ${email}\n📞 *Teléfono:* ${phone}\n📌 *Asunto:* ${subject}\n💬 *Mensaje:* ${message}`;
+      } else if (form.id === 'formCallback') {
+        const name = form.querySelector('#callbackName')?.value.trim() || '';
+        const phone = form.querySelector('#callbackPhone')?.value.trim() || '';
+        msgText = `Hola, solicito que me llaméis:\n\n👤 *Nombre:* ${name}\n📞 *Teléfono:* ${phone}`;
+      } else {
+        msgText = `Hola, solicito información desde el formulario web de Core Insurance.`;
+      }
+
+      const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(msgText)}`;
+
       setTimeout(() => {
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -198,12 +224,15 @@ function initSimulatedForms() {
           document.body.style.overflow = '';
         }
 
+        // Open WhatsApp in new tab
+        window.open(waUrl, '_blank');
+
         // Reset form fields
         form.reset();
 
         // Show elegant success notification
-        showToast('Solicitud Enviada', 'Nos pondremos en contacto contigo a la mayor brevedad.');
-      }, 1500);
+        showToast('Abriendo WhatsApp', 'Se ha generado tu mensaje. Te responderemos de inmediato.');
+      }, 600);
     });
   });
 }
