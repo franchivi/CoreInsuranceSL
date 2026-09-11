@@ -2153,6 +2153,18 @@ ul {
   .nav-menu.open {
     right: 0;
   }
+  .nav-menu .nav-link {
+    color: var(--secondary) !important;
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link.active {
+    color: var(--primary) !important;
+  }
+  .nav-toggle.open span {
+    background-color: var(--secondary) !important;
+  }
   .nav-menu .btn {
     width: 100%;
     margin-top: 1rem;
