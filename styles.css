@@ -231,6 +231,438 @@ ul {
   transform: translateY(-2px);
 }
 
+.btn-whatsapp-filled {
+  background-color: #25D366;
+  color: #ffffff;
+  border: 2px solid #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp-filled:hover {
+  background-color: #1eb956;
+  border-color: #1eb956;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+}
+
+.btn-hero-outline {
+  background-color: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  box-shadow: none;
+}
+
+[data-theme="dark"] .btn-hero-outline {
+  color: var(--text-main);
+  border-color: var(--primary);
+}
+
+.btn-hero-outline:hover {
+  background-color: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .btn-hero-outline:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+/* --- Hero Checkmarks --- */
+.hero-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.hero-check-item i {
+  color: #22c55e;
+  font-size: 1.15rem;
+}
+
+/* --- Pensado para Proteger (Image 1 Layout) --- */
+.pensado-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 2.5rem auto 3.5rem auto;
+}
+
+@media (max-width: 768px) {
+  .pensado-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pensado-card {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 1.35rem 1.6rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.pensado-card:hover {
+  transform: translateY(-3px);
+  background-color: #1f1f1f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.pensado-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.pensado-card p {
+  margin: 0;
+  font-size: 0.93rem;
+  color: #cccccc;
+  line-height: 1.4;
+}
+
+/* Checklist para "¿Qué puede incluir tu protección?" */
+.coberturas-check-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.coberturas-check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.coberturas-check-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .coberturas-check-item {
+  color: var(--text-main);
+}
+
+.coberturas-check-item i {
+  font-size: 1.4rem;
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .coberturas-check-item i {
+  color: var(--primary);
+}
+
+/* --- Badges under About Us photo --- */
+.about-badges-row {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .about-badges-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.about-badge-item {
+  flex: 1;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.02rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .about-badge-item {
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+.about-badge-item:hover {
+  transform: translateY(-3px);
+  background-color: #1f1f1f;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.about-badge-item span:first-child {
+  font-size: 1.15rem;
+}
+
+/* --- Promoción Vida y Deporte (Image 1 Layout) --- */
+.promo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto 2.5rem auto;
+}
+
+@media (max-width: 768px) {
+  .promo-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.promo-card-excel {
+  border: 3px solid #111111;
+  border-radius: 36px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+[data-theme="dark"] .promo-card-excel {
+  border-color: var(--primary);
+  background-color: var(--bg-card);
+}
+
+.promo-card-excel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.promo-img-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  height: 195px;
+  width: 100%;
+}
+
+.promo-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.promo-card-excel:hover .promo-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.promo-card-val {
+  font-family: var(--font-title);
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: #111111;
+  margin: 0.85rem 0 0.15rem 0;
+}
+
+[data-theme="dark"] .promo-card-val {
+  color: var(--text-main);
+}
+
+.promo-card-lbl {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.3;
+}
+
+[data-theme="dark"] .promo-card-lbl {
+  color: var(--text-muted);
+}
+
+.promo-card-req {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #111111;
+  margin-top: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="dark"] .promo-card-req {
+  color: var(--text-main);
+}
+
+.promo-conditions-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #111111;
+}
+
+[data-theme="dark"] .promo-conditions-list {
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .client-reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* --- Visual Coberturas Grid --- */
+.coberturas-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .coberturas-visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cobertura-visual-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2.25rem 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.cobertura-visual-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 16px 30px -10px rgba(190, 155, 59, 0.15);
+}
+
+.cobertura-visual-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.cobertura-visual-card:hover .cobertura-visual-icon {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.cobertura-visual-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .cobertura-visual-info h3 {
+  color: var(--text-main);
+}
+
+.cobertura-visual-info p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --- Google Reviews Section --- */
+.google-reviews-section {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--primary-soft) 100%);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 5.5rem 0;
+}
+
+.google-reviews-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  padding: 3.5rem 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08);
+  text-align: center;
+}
+
+.google-stars {
+  color: #f59e0b;
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.google-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #4285F4;
+  color: #ffffff;
+  padding: 0.95rem 2.5rem;
+  border-radius: var(--radius-round);
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(66, 133, 244, 0.35);
+  margin-top: 1.5rem;
+}
+
+.google-btn:hover {
+  background-color: #3367d6;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(66, 133, 244, 0.45);
+}
+
 /* --- Header & Navigation --- */
 .site-header {
   position: fixed;
@@ -289,7 +721,7 @@ ul {
 }
 
 .logo-img {
-  height: 48px;
+  height: 58px;
   width: auto;
   display: block;
   transition: var(--transition);
@@ -301,7 +733,7 @@ ul {
 }
 
 .site-header.scrolled .logo-img {
-  height: 40px;
+  height: 48px;
 }
 
 .footer-logo-img {

@@ -268,7 +268,7 @@ function showToast(title, message) {
 
 /* --- Smooth Fade-In-Up Animations on Scroll --- */
 function initScrollAnimations() {
-  const elements = document.querySelectorAll('.value-card, .service-card, .news-card, .about-img-frame, .contact-info-panel, .contact-form-panel');
+  const elements = document.querySelectorAll('.value-card, .service-card, .news-card, .about-img-frame, .contact-info-panel, .pensado-card, .coberturas-check-container, .google-reviews-box, .promo-card, .promo-card-excel, .client-review-card, .about-badge-item');
   
   if (!elements.length) return;
 
