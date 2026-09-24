@@ -231,7 +231,7 @@ function initSimulatedForms() {
         // Track conversion in Google Ads
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', {
-            'send_to': 'AW-18467672751/sdg7cNeexIMdEK-lieZE',
+            'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
             'event_category': 'WhatsApp Form Submit',
             'event_label': form.id || 'Formulario WhatsApp'
           });
@@ -320,7 +320,7 @@ function initWhatsAppTracking() {
         
         // Conversión principal de Google Ads
         gtag('event', 'conversion', {
-          'send_to': 'AW-18467672751/sdg7cNeexIMdEK-lieZE',
+          'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
           'event_category': 'WhatsApp',
           'event_label': linkLabel
         });
@@ -339,7 +339,7 @@ function initWhatsAppTracking() {
 window.gtagReportWhatsAppConversion = function(url) {
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
-      'send_to': 'AW-18467672751/sdg7cNeexIMdEK-lieZE',
+      'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
       'event_callback': function() {
         if (typeof url !== 'undefined' && url) {
           window.open(url, '_blank');
