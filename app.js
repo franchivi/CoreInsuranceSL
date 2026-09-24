@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCookieConsent();
   initSimulatedForms();
   initScrollAnimations();
+  initWhatsAppTracking();
 });
 
 /* --- Header Scroll Effect --- */
@@ -227,6 +228,19 @@ function initSimulatedForms() {
         // Open WhatsApp in new tab
         window.open(waUrl, '_blank');
 
+        // Track conversion in Google Ads
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18467672751',
+            'event_category': 'WhatsApp Form Submit',
+            'event_label': form.id || 'Formulario WhatsApp'
+          });
+          gtag('event', 'generate_lead', {
+            'event_category': 'engagement',
+            'event_label': form.id || 'Formulario WhatsApp'
+          });
+        }
+
         // Reset form fields
         form.reset();
 
@@ -294,3 +308,44 @@ function initScrollAnimations() {
 
   elements.forEach(el => observer.observe(el));
 }
+
+/* --- Google Ads WhatsApp Conversion Tracking --- */
+function initWhatsAppTracking() {
+  const waLinks = document.querySelectorAll('a[href*="wa.me"], .whatsapp-btn, .btn-whatsapp, .whatsapp-bubble');
+
+  waLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag === 'function') {
+        const linkLabel = link.innerText.trim() || link.getAttribute('aria-label') || 'Boton WhatsApp';
+        
+        // Conversión principal de Google Ads
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18467672751',
+          'event_category': 'WhatsApp',
+          'event_label': linkLabel
+        });
+
+        // Evento de interacción genérico
+        gtag('event', 'click_whatsapp', {
+          'event_category': 'engagement',
+          'event_label': linkLabel
+        });
+      }
+    });
+  });
+}
+
+// Función global accesible por si se requiere invocar manualmente o desde GTM
+window.gtagReportWhatsAppConversion = function(url) {
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18467672751',
+      'event_callback': function() {
+        if (typeof url !== 'undefined' && url) {
+          window.open(url, '_blank');
+        }
+      }
+    });
+  }
+  return false;
+};
