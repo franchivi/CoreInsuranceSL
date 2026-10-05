@@ -142,24 +142,40 @@ function initReviewsSlider() {
   window.addEventListener('resize', updateSlider);
 }
 
-/* --- Cookie Consent Bar --- */
+/* --- Cookie Consent Bar con Google Consent Mode v2 --- */
 function initCookieConsent() {
   const cookieBar = document.querySelector('#cookieBar');
   const acceptBtn = document.querySelector('#cookieAccept');
   const rejectBtn = document.querySelector('#cookieReject');
 
-  if (!cookieBar || !acceptBtn || !rejectBtn) return;
+  const updateConsent = (granted) => {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': granted ? 'granted' : 'denied',
+        'ad_user_data': granted ? 'granted' : 'denied',
+        'ad_personalization': granted ? 'granted' : 'denied',
+        'analytics_storage': granted ? 'granted' : 'denied'
+      });
+    }
+  };
 
   const consent = localStorage.getItem('cookie-consent');
-  if (!consent) {
+  if (consent === 'accepted') {
+    updateConsent(true);
+  } else if (consent === 'rejected') {
+    updateConsent(false);
+  } else if (cookieBar) {
     setTimeout(() => {
       cookieBar.style.display = 'block';
     }, 1500);
   }
 
+  if (!cookieBar || !acceptBtn || !rejectBtn) return;
+
   const handleChoice = (choice) => {
     localStorage.setItem('cookie-consent', choice);
     cookieBar.style.display = 'none';
+    updateConsent(choice === 'accepted');
   };
 
   acceptBtn.addEventListener('click', () => handleChoice('accepted'));
@@ -225,20 +241,31 @@ function initSimulatedForms() {
           document.body.style.overflow = '';
         }
 
-        // Open WhatsApp in new tab
-        window.open(waUrl, '_blank');
-
-        // Track conversion in Google Ads
+        // Track conversion in Google Ads con beacon para evitar pérdida de datos
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', {
             'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
             'event_category': 'WhatsApp Form Submit',
-            'event_label': form.id || 'Formulario WhatsApp'
+            'event_label': form.id || 'Formulario WhatsApp',
+            'transport_type': 'beacon',
+            'value': 1.0,
+            'currency': 'EUR'
           });
           gtag('event', 'generate_lead', {
             'event_category': 'engagement',
-            'event_label': form.id || 'Formulario WhatsApp'
+            'event_label': form.id || 'Formulario WhatsApp',
+            'transport_type': 'beacon'
           });
+        }
+
+        // Open WhatsApp in new tab or direct redirect fallback
+        try {
+          const win = window.open(waUrl, '_blank');
+          if (!win || win.closed || typeof win.closed === 'undefined') {
+            window.location.href = waUrl;
+          }
+        } catch (err) {
+          window.location.href = waUrl;
         }
 
         // Reset form fields
@@ -246,7 +273,7 @@ function initSimulatedForms() {
 
         // Show elegant success notification
         showToast('Abriendo WhatsApp', 'Se ha generado tu mensaje. Te responderemos de inmediato.');
-      }, 600);
+      }, 500);
     });
   });
 }
@@ -315,31 +342,59 @@ function initWhatsAppTracking() {
 
   waLinks.forEach(link => {
     link.addEventListener('click', () => {
+      const linkLabel = link.innerText.trim() || link.getAttribute('aria-label') || 'Boton WhatsApp';
+      
       if (typeof gtag === 'function') {
-        const linkLabel = link.innerText.trim() || link.getAttribute('aria-label') || 'Boton WhatsApp';
-        
-        // Conversión principal de Google Ads
+        // Conversión principal de Google Ads con beacon para garantizar envío al salir hacia WhatsApp
         gtag('event', 'conversion', {
           'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
           'event_category': 'WhatsApp',
-          'event_label': linkLabel
+          'event_label': linkLabel,
+          'transport_type': 'beacon',
+          'value': 1.0,
+          'currency': 'EUR'
         });
 
         // Evento de interacción genérico
         gtag('event', 'click_whatsapp', {
           'event_category': 'engagement',
-          'event_label': linkLabel
+          'event_label': linkLabel,
+          'transport_type': 'beacon'
         });
+
+        console.log('📡 [Google Ads] Conversión enviada a AW-18467672751/sdg7cNeexIMdEK-1ieZE (' + linkLabel + ')');
       }
     });
   });
 }
+
+// Función accesible desde consola para verificación inmediata en Tag Assistant / pruebas
+window.testWhatsAppConversion = function() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+      'event_category': 'WhatsApp_Test',
+      'event_label': 'Prueba_Manual',
+      'transport_type': 'beacon',
+      'value': 1.0,
+      'currency': 'EUR'
+    });
+    console.log('✅ [Google Ads] Ping de conversión enviado satisfactoriamente a AW-18467672751/sdg7cNeexIMdEK-1ieZE');
+    return 'Conversión disparada con éxito a Google Ads';
+  } else {
+    console.error('❌ gtag no está disponible en la página');
+    return 'Error: gtag no disponible';
+  }
+};
 
 // Función global accesible por si se requiere invocar manualmente o desde GTM
 window.gtagReportWhatsAppConversion = function(url) {
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
       'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+      'transport_type': 'beacon',
+      'value': 1.0,
+      'currency': 'EUR',
       'event_callback': function() {
         if (typeof url !== 'undefined' && url) {
           window.open(url, '_blank');
