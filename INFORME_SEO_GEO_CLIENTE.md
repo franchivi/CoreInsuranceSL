@@ -120,7 +120,7 @@ Se han concedido permisos explícitos de rastreo a los principales rastreadores 
 
 - **Etiqueta Global gtag.js:** Vinculada a la cuenta de Google Ads `AW-18467672751`.
 - **Tracking Automático de WhatsApp:**
-  - Evento de conversión: `AW-18467672751/sdg7cNeexIMdEK-1ieZE`.
+  - Evento de conversión: `AW-18467672751/Sdg7CNeexIMdEK-lieZE`.
   - Detección activa en todos los botones de llamada a WhatsApp (menú superior, hero, sección de contacto y widget flotante 24/7).
 - **Formularios con Redirección a WhatsApp:**
   - El formulario de propuesta personalizada procesa los datos del cliente y abre directamente un chat estructurado en WhatsApp, registrando simultáneamente la conversión en Google Ads (`generate_lead`).

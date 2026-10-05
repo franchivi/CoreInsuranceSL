@@ -244,7 +244,7 @@ function initSimulatedForms() {
         // Track conversion in Google Ads con beacon para evitar pérdida de datos
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', {
-            'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+            'send_to': 'AW-18467672751/Sdg7CNeexIMdEK-lieZE',
             'event_category': 'WhatsApp Form Submit',
             'event_label': form.id || 'Formulario WhatsApp',
             'transport_type': 'beacon',
@@ -347,7 +347,7 @@ function initWhatsAppTracking() {
       if (typeof gtag === 'function') {
         // Conversión principal de Google Ads con beacon para garantizar envío al salir hacia WhatsApp
         gtag('event', 'conversion', {
-          'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+          'send_to': 'AW-18467672751/Sdg7CNeexIMdEK-lieZE',
           'event_category': 'WhatsApp',
           'event_label': linkLabel,
           'transport_type': 'beacon',
@@ -362,7 +362,7 @@ function initWhatsAppTracking() {
           'transport_type': 'beacon'
         });
 
-        console.log('📡 [Google Ads] Conversión enviada a AW-18467672751/sdg7cNeexIMdEK-1ieZE (' + linkLabel + ')');
+        console.log('📡 [Google Ads] Conversión enviada a AW-18467672751/Sdg7CNeexIMdEK-lieZE (' + linkLabel + ')');
       }
     });
   });
@@ -372,14 +372,14 @@ function initWhatsAppTracking() {
 window.testWhatsAppConversion = function() {
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
-      'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+      'send_to': 'AW-18467672751/Sdg7CNeexIMdEK-lieZE',
       'event_category': 'WhatsApp_Test',
       'event_label': 'Prueba_Manual',
       'transport_type': 'beacon',
       'value': 1.0,
       'currency': 'EUR'
     });
-    console.log('✅ [Google Ads] Ping de conversión enviado satisfactoriamente a AW-18467672751/sdg7cNeexIMdEK-1ieZE');
+    console.log('✅ [Google Ads] Ping de conversión enviado satisfactoriamente a AW-18467672751/Sdg7CNeexIMdEK-lieZE');
     return 'Conversión disparada con éxito a Google Ads';
   } else {
     console.error('❌ gtag no está disponible en la página');
@@ -391,7 +391,7 @@ window.testWhatsAppConversion = function() {
 window.gtagReportWhatsAppConversion = function(url) {
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
-      'send_to': 'AW-18467672751/sdg7cNeexIMdEK-1ieZE',
+      'send_to': 'AW-18467672751/Sdg7CNeexIMdEK-lieZE',
       'transport_type': 'beacon',
       'value': 1.0,
       'currency': 'EUR',
